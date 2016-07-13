@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Mario Lukas">
+  
+  <title>Hardware - FabScanPi</title>
+  
+
+  <link rel="shortcut icon" href="../images/fabscanpi_ICON.png">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hardware";
+    var mkdocs_page_input_path = "hardware.md";
+    var mkdocs_page_url = "/hardware/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="../js/main.js"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> FabScanPi</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Hardware</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#parts">Parts</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#case">Case</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#electronics">Electronics</a></li>
+                
+                    <li><a class="toctree-l4" href="#part-list">Part List</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../software/">Software</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../developing/">Developing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../faq/">F.A.Q</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">FabScanPi</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Hardware</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="parts">Parts</h1>
+<h1 id="case">Case</h1>
+<p>The laser cut files can be found at <a href="https://github.com/mariolukas/FabScan-Case">https://github.com/mariolukas/FabScan-Case</a></p>
+<h1 id="electronics">Electronics</h1>
+<p><img alt="alt text" src="../images/FabScanCube.jpg" /></p>
+<p>The FabScan PI case is the same as the FabScan (CUBE) case. The Logitech webcam is replaced by the a Raspberry PI
+camera module. The Logitech webcam will also work, but it is very slow in combination with the Raspberry PI. 
+The Raspberry PI camera module also provides a higher resolution what will increase the scan results. It is highly 
+recommended to use a Raspberry PI 2 because of its four CPU core (FabScan PI provides multicore support). 
+Connect the Arduino with the FabScan Shield mounted on it to one of the Raspberry Pi's USB ports and mount the camera 
+in front of the turntable. </p>
+<p>If you are not using the FabScan Shield, you can find the pinout of the Arduino in the firmware repository.</p>
+<p>https://github.com/mariolukas/FabScanPi-Firmware/blob/master/configuration.h</p>
+<p>For a smoother turntable movement it is better to use a silent step stick motor driver. With a silent step stick 
+motor driver there is no need to glue the object to the turntable. It will not slip/slide anymore.</p>
+<p>It is possible to get better scan results by mounting a RGB LED Ring or LED strip (WS2812 or compatible) beside the 
+camera module. The LED ring/strip is connected to the 3 pinned header between the sockel for the fourth motor driver.
+The "S" pin goes to DI of the LED ring/strip.</p>
+<p>Finally connect the 5V power supply to the Raspberry PI 2 and the 12V power supply to the Arduino. Turn both on.</p>
+<p>Developers can find the firmware source at: <a href="https://github.com/mariolukas/FabScan-Case">https://github.com/mariolukas/FabScanPi-Firmware</a></p>
+<h3 id="part-list">Part List</h3>
+<p>All needed parts can be purchased at: <a href="http://www.watterott.com">http://www.watterott.com</a></p>
+<ul>
+<li>Raspberry Pi 2: <a href="http://www.watterott.com/en/Raspberry-Pi-Modell-2">http://www.watterott.com/en/Raspberry-Pi-Modell-2</a></li>
+<li>Raspberry Pi camera module: <a href="http://www.watterott.com/en/Raspberry-Pi-Kamera-Board">http://www.watterott.com/en/Raspberry-Pi-Kamera-Board</a></li>
+<li>Raspberry camera module cable extension</li>
+<li>Arduino/Genuino UNO: <a href="http://www.watterott.com/en/Genuino-Uno-Rev3">http://www.watterott.com/en/Genuino-Uno-Rev3</a></li>
+<li>FabScan Arduino Shield: <a href="http://www.watterott.com/en/Arduino-FabScan-Shield">http://www.watterott.com/en/Arduino-FabScan-Shield</a></li>
+<li>Silent Step Stick motor driver: <a href="http://www.watterott.com/en/SilentStepStick">http://www.watterott.com/en/SilentStepStick</a></li>
+<li>FabScan Case: <a href="http://www.watterott.com/en/Fabscan-CUBE-Kit">http://www.watterott.com/en/Fabscan-CUBE-Kit</a></li>
+<li>Red line laser module: <a href="http://www.watterott.com/en/5mW-Linienlaser-rot">http://www.watterott.com/en/5mW-Linienlaser-rot</a></li>
+<li>5V Power Supply ( Raspberry PI ): <a href="http://www.watterott.com/en/HNP15-USB">http://www.watterott.com/en/HNP15-USB</a></li>
+<li>12V Power Supply ( Arduino and Shield ): <a href="http://www.watterott.com/en/Netzteil-12V-2A">http://www.watterott.com/en/Netzteil-12V-2A</a></li>
+</ul>
+<p>There will be a release of the official FabScan PI - HAT soon. This HAT replaces the Arduino and the FabScan Arduino 
+Shield. Another benefit of using the FabScan HAT is that the whole setup needs only one 12V power supply. </p>
+<p><img src="images/fabscanpi-hat.jpg" width="400" height="200"></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../software/" class="btn btn-neutral float-right" title="Software">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Copyright 2015-2016, Mario Lukas</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../software/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
