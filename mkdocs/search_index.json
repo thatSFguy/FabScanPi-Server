@@ -22,28 +22,23 @@
         }, 
         {
             "location": "/hardware/", 
-            "text": "Parts\n\n\nCase\n\n\nThe laser cut files can be found at \nhttps://github.com/mariolukas/FabScan-Case\n\n\nElectronics\n\n\n\n\nThe FabScan PI case is the same as the FabScan (CUBE) case. The Logitech webcam is replaced by the a Raspberry PI\ncamera module. The Logitech webcam will also work, but it is very slow in combination with the Raspberry PI. \nThe Raspberry PI camera module also provides a higher resolution what will increase the scan results. It is highly \nrecommended to use a Raspberry PI 2 because of its four CPU core (FabScan PI provides multicore support). \nConnect the Arduino with the FabScan Shield mounted on it to one of the Raspberry Pi's USB ports and mount the camera \nin front of the turntable. \n\n\nIf you are not using the FabScan Shield, you can find the pinout of the Arduino in the firmware repository.\n\n\nhttps://github.com/mariolukas/FabScanPi-Firmware/blob/master/configuration.h\n\n\nFor a smoother turntable movement it is better to use a silent step stick motor driver. With a silent step stick \nmotor driver there is no need to glue the object to the turntable. It will not slip/slide anymore.\n\n\nIt is possible to get better scan results by mounting a RGB LED Ring or LED strip (WS2812 or compatible) beside the \ncamera module. The LED ring/strip is connected to the 3 pinned header between the sockel for the fourth motor driver.\nThe \"S\" pin goes to DI of the LED ring/strip.\n\n\nFinally connect the 5V power supply to the Raspberry PI 2 and the 12V power supply to the Arduino. Turn both on.\n\n\nDevelopers can find the firmware source at: \nhttps://github.com/mariolukas/FabScanPi-Firmware\n\n\nPart List\n\n\nAll needed parts can be purchased at: \nhttp://www.watterott.com\n\n\n\n\nRaspberry Pi 2: \nhttp://www.watterott.com/en/Raspberry-Pi-Modell-2\n\n\nRaspberry Pi camera module: \nhttp://www.watterott.com/en/Raspberry-Pi-Kamera-Board\n\n\nRaspberry camera module cable extension\n\n\nArduino/Genuino UNO: \nhttp://www.watterott.com/en/Genuino-Uno-Rev3\n\n\nFabScan Arduino Shield: \nhttp://www.watterott.com/en/Arduino-FabScan-Shield\n\n\nSilent Step Stick motor driver: \nhttp://www.watterott.com/en/SilentStepStick\n\n\nFabScan Case: \nhttp://www.watterott.com/en/Fabscan-CUBE-Kit\n\n\nRed line laser module: \nhttp://www.watterott.com/en/5mW-Linienlaser-rot\n\n\n5V Power Supply ( Raspberry PI ): \nhttp://www.watterott.com/en/HNP15-USB\n\n\n12V Power Supply ( Arduino and Shield ): \nhttp://www.watterott.com/en/Netzteil-12V-2A\n\n\n\n\nThere will be a release of the official FabScan PI - HAT soon. This HAT replaces the Arduino and the FabScan Arduino \nShield. Another benefit of using the FabScan HAT is that the whole setup needs only one 12V power supply.", 
+            "text": "Part List\n\n\nTODO\n\n\nCase\n\n\nThe laser cut files can be found at \nhttps://github.com/mariolukas/FabScan-Case\n\n\n\n\n\n\nAssembly\n\nTODO\n\n\nElectronics\n\n\nFabScanPi HAT\n\n\n\n\nMotor connector\n\nTODO\n\n\nLaser connectors\n\nTODO\n\n\nLED connector\n\nTODO\n\n\nSafety switch\n\nTODO\n\n\nServo connectors\n\nTODO", 
             "title": "Hardware"
         }, 
         {
-            "location": "/hardware/#parts", 
-            "text": "", 
-            "title": "Parts"
+            "location": "/hardware/#part-list", 
+            "text": "TODO", 
+            "title": "Part List"
         }, 
         {
             "location": "/hardware/#case", 
-            "text": "The laser cut files can be found at  https://github.com/mariolukas/FabScan-Case", 
+            "text": "The laser cut files can be found at  https://github.com/mariolukas/FabScan-Case    Assembly \nTODO", 
             "title": "Case"
         }, 
         {
             "location": "/hardware/#electronics", 
-            "text": "The FabScan PI case is the same as the FabScan (CUBE) case. The Logitech webcam is replaced by the a Raspberry PI\ncamera module. The Logitech webcam will also work, but it is very slow in combination with the Raspberry PI. \nThe Raspberry PI camera module also provides a higher resolution what will increase the scan results. It is highly \nrecommended to use a Raspberry PI 2 because of its four CPU core (FabScan PI provides multicore support). \nConnect the Arduino with the FabScan Shield mounted on it to one of the Raspberry Pi's USB ports and mount the camera \nin front of the turntable.   If you are not using the FabScan Shield, you can find the pinout of the Arduino in the firmware repository.  https://github.com/mariolukas/FabScanPi-Firmware/blob/master/configuration.h  For a smoother turntable movement it is better to use a silent step stick motor driver. With a silent step stick \nmotor driver there is no need to glue the object to the turntable. It will not slip/slide anymore.  It is possible to get better scan results by mounting a RGB LED Ring or LED strip (WS2812 or compatible) beside the \ncamera module. The LED ring/strip is connected to the 3 pinned header between the sockel for the fourth motor driver.\nThe \"S\" pin goes to DI of the LED ring/strip.  Finally connect the 5V power supply to the Raspberry PI 2 and the 12V power supply to the Arduino. Turn both on.  Developers can find the firmware source at:  https://github.com/mariolukas/FabScanPi-Firmware", 
+            "text": "FabScanPi HAT   Motor connector \nTODO  Laser connectors \nTODO  LED connector \nTODO  Safety switch \nTODO  Servo connectors \nTODO", 
             "title": "Electronics"
-        }, 
-        {
-            "location": "/hardware/#part-list", 
-            "text": "All needed parts can be purchased at:  http://www.watterott.com   Raspberry Pi 2:  http://www.watterott.com/en/Raspberry-Pi-Modell-2  Raspberry Pi camera module:  http://www.watterott.com/en/Raspberry-Pi-Kamera-Board  Raspberry camera module cable extension  Arduino/Genuino UNO:  http://www.watterott.com/en/Genuino-Uno-Rev3  FabScan Arduino Shield:  http://www.watterott.com/en/Arduino-FabScan-Shield  Silent Step Stick motor driver:  http://www.watterott.com/en/SilentStepStick  FabScan Case:  http://www.watterott.com/en/Fabscan-CUBE-Kit  Red line laser module:  http://www.watterott.com/en/5mW-Linienlaser-rot  5V Power Supply ( Raspberry PI ):  http://www.watterott.com/en/HNP15-USB  12V Power Supply ( Arduino and Shield ):  http://www.watterott.com/en/Netzteil-12V-2A   There will be a release of the official FabScan PI - HAT soon. This HAT replaces the Arduino and the FabScan Arduino \nShield. Another benefit of using the FabScan HAT is that the whole setup needs only one 12V power supply.", 
-            "title": "Part List"
         }, 
         {
             "location": "/software/", 
@@ -97,17 +92,62 @@
         }, 
         {
             "location": "/contributing/", 
-            "text": "", 
+            "text": "Contributing to this project\n\n\nPlease take a moment to review this document in order to make the contribution\nprocess easy and effective for everyone involved.\n\n\nFollowing these guidelines helps to communicate that you respect the time of\nthe developers managing and developing this open source project. In return,\nthey should reciprocate that respect in addressing your issue or assessing\npatches and features.\n\n\nUsing the issue tracker\n\n\nThe issue tracker is the preferred channel for \nbug reports\n,\n\nfeatures requests\n and \nsubmitting pull\nrequests\n, but please respect the following restrictions:\n\n\n\n\n\n\nPlease \ndo not\n use the issue tracker for personal support requests (use\n  \nFabScan Group\n or \nSlack\n).\n\n\n\n\n\n\nPlease \ndo not\n derail or troll issues. Keep the discussion on topic and\n  respect the opinions of others.\n\n\n\n\n\n\n\n\nBug reports\n\n\nA bug is a \ndemonstrable problem\n that is caused by the code in the repository.\nGood bug reports are extremely helpful - thank you!\n\n\nGuidelines for bug reports:\n\n\n\n\n\n\nUse the GitHub issue search\n \n check if the issue has already been\n   reported.\n\n\n\n\n\n\nCheck if the issue has been fixed\n \n try to reproduce it using the\n   latest \nmaster\n or development branch in the repository.\n\n\n\n\n\n\nIsolate the problem\n \n create a \nreduced test\n   case\n and a live example.\n\n\n\n\n\n\nA good bug report shouldn't leave others needing to chase you up for more\ninformation. Please try to be as detailed as possible in your report. What is\nyour environment? What steps will reproduce the issue? What browser(s) and OS\nexperience the problem? What would you expect to be the outcome? All these\ndetails will help people to fix any potential bugs.\n\n\nExample:\n\n\n\n\nShort and descriptive example bug report title\n\n\nA summary of the issue and the browser/OS environment in which it occurs. If\nsuitable, include the steps required to reproduce the bug.\n\n\n\n\nThis is the first step\n\n\nThis is the second step\n\n\nFurther steps, etc.\n\n\n\n\nurl\n - a link to the reduced test case\n\n\nAny other information you want to share that is relevant to the issue being\nreported. This might include the lines of code that you have identified as\ncausing the bug, and potential solutions (and your opinions on their\nmerits).\n\n\n\n\n\n\nFeature requests\n\n\nFeature requests are welcome. But take a moment to find out whether your idea\nfits with the scope and aims of the project. It's up to \nyou\n to make a strong\ncase to convince the project's developers of the merits of this feature. Please\nprovide as much detail and context as possible.\n\n\n\n\nPull requests\n\n\nGood pull requests - patches, improvements, new features - are a fantastic\nhelp. They should remain focused in scope and avoid containing unrelated\ncommits.\n\n\nPlease ask first\n before embarking on any significant pull request (e.g.\nimplementing features, refactoring code, porting to a different language),\notherwise you risk spending a lot of time working on something that the\nproject's developers might not want to merge into the project.\n\n\nPlease adhere to the coding conventions used throughout a project (indentation,\naccurate comments, etc.) and any other requirements (such as test coverage).\n\n\nFollow this process if you'd like your work considered for inclusion in the\nproject:\n\n\n\n\nFork\n the project, clone your fork,\n   and configure the remotes:\n\n\n\n\nbash\n   # Clone your fork of the repo into the current directory\n   git clone https://github.com/\nyour-username\n/\nrepo-name\n\n   # Navigate to the newly cloned directory\n   cd \nrepo-name\n\n   # Assign the original repo to a remote called \"upstream\"\n   git remote add upstream https://github.com/\nupstream-owner\n/\nrepo-name\n\n\n\n\nIf you cloned a while ago, get the latest changes from upstream:\n\n\n\n\nbash\n   git checkout \ndev-branch\n\n   git pull upstream \ndev-branch\n\n\n\n\nCreate a new topic branch (off the main project development branch) to\n   contain your feature, change, or fix:\n\n\n\n\nbash\n   git checkout -b \ntopic-branch-name\n\n\n\n\n\n\nCommit your changes in logical chunks. Please adhere to these \ngit commit\n   message guidelines\n\n   or your code is unlikely be merged into the main project. Use Git's\n   \ninteractive rebase\n\n   feature to tidy up your commits before making them public.\n\n\n\n\n\n\nLocally merge (or rebase) the upstream development branch into your topic branch:\n\n\n\n\n\n\nbash\n   git pull [--rebase] upstream \ndev-branch\n\n\n\n\nPush your topic branch up to your fork:\n\n\n\n\nbash\n   git push origin \ntopic-branch-name\n\n\n\n\nOpen a Pull Request\n\n    with a clear title and description.\n\n\n\n\nIMPORTANT\n: By submitting a patch, you agree to allow the project owner to\nlicense your work under the same license as that used by the project.", 
             "title": "Contributing"
         }, 
         {
+            "location": "/contributing/#contributing-to-this-project", 
+            "text": "Please take a moment to review this document in order to make the contribution\nprocess easy and effective for everyone involved.  Following these guidelines helps to communicate that you respect the time of\nthe developers managing and developing this open source project. In return,\nthey should reciprocate that respect in addressing your issue or assessing\npatches and features.", 
+            "title": "Contributing to this project"
+        }, 
+        {
+            "location": "/contributing/#using-the-issue-tracker", 
+            "text": "The issue tracker is the preferred channel for  bug reports , features requests  and  submitting pull\nrequests , but please respect the following restrictions:    Please  do not  use the issue tracker for personal support requests (use\n   FabScan Group  or  Slack ).    Please  do not  derail or troll issues. Keep the discussion on topic and\n  respect the opinions of others.", 
+            "title": "Using the issue tracker"
+        }, 
+        {
+            "location": "/contributing/#bug-reports", 
+            "text": "A bug is a  demonstrable problem  that is caused by the code in the repository.\nGood bug reports are extremely helpful - thank you!  Guidelines for bug reports:    Use the GitHub issue search    check if the issue has already been\n   reported.    Check if the issue has been fixed    try to reproduce it using the\n   latest  master  or development branch in the repository.    Isolate the problem    create a  reduced test\n   case  and a live example.    A good bug report shouldn't leave others needing to chase you up for more\ninformation. Please try to be as detailed as possible in your report. What is\nyour environment? What steps will reproduce the issue? What browser(s) and OS\nexperience the problem? What would you expect to be the outcome? All these\ndetails will help people to fix any potential bugs.  Example:   Short and descriptive example bug report title  A summary of the issue and the browser/OS environment in which it occurs. If\nsuitable, include the steps required to reproduce the bug.   This is the first step  This is the second step  Further steps, etc.   url  - a link to the reduced test case  Any other information you want to share that is relevant to the issue being\nreported. This might include the lines of code that you have identified as\ncausing the bug, and potential solutions (and your opinions on their\nmerits).", 
+            "title": "Bug reports"
+        }, 
+        {
+            "location": "/contributing/#feature-requests", 
+            "text": "Feature requests are welcome. But take a moment to find out whether your idea\nfits with the scope and aims of the project. It's up to  you  to make a strong\ncase to convince the project's developers of the merits of this feature. Please\nprovide as much detail and context as possible.", 
+            "title": "Feature requests"
+        }, 
+        {
+            "location": "/contributing/#pull-requests", 
+            "text": "Good pull requests - patches, improvements, new features - are a fantastic\nhelp. They should remain focused in scope and avoid containing unrelated\ncommits.  Please ask first  before embarking on any significant pull request (e.g.\nimplementing features, refactoring code, porting to a different language),\notherwise you risk spending a lot of time working on something that the\nproject's developers might not want to merge into the project.  Please adhere to the coding conventions used throughout a project (indentation,\naccurate comments, etc.) and any other requirements (such as test coverage).  Follow this process if you'd like your work considered for inclusion in the\nproject:   Fork  the project, clone your fork,\n   and configure the remotes:   bash\n   # Clone your fork of the repo into the current directory\n   git clone https://github.com/ your-username / repo-name \n   # Navigate to the newly cloned directory\n   cd  repo-name \n   # Assign the original repo to a remote called \"upstream\"\n   git remote add upstream https://github.com/ upstream-owner / repo-name   If you cloned a while ago, get the latest changes from upstream:   bash\n   git checkout  dev-branch \n   git pull upstream  dev-branch   Create a new topic branch (off the main project development branch) to\n   contain your feature, change, or fix:   bash\n   git checkout -b  topic-branch-name    Commit your changes in logical chunks. Please adhere to these  git commit\n   message guidelines \n   or your code is unlikely be merged into the main project. Use Git's\n    interactive rebase \n   feature to tidy up your commits before making them public.    Locally merge (or rebase) the upstream development branch into your topic branch:    bash\n   git pull [--rebase] upstream  dev-branch   Push your topic branch up to your fork:   bash\n   git push origin  topic-branch-name   Open a Pull Request \n    with a clear title and description.   IMPORTANT : By submitting a patch, you agree to allow the project owner to\nlicense your work under the same license as that used by the project.", 
+            "title": "Pull requests"
+        }, 
+        {
             "location": "/community/", 
-            "text": "", 
+            "text": "Slack\n\n\nUse the FabScan Slack channel for direct messaging and chat communication. \n\nhttps://fabscan.slack.com\n\n\nGoogle Group\n\n\nFor general problems and information use the FabScan google group. \n\nhttps://groups.google.com/forum/#!forum/fabscan\n\n\nFacebook\n\n\nLike our Facebook Page.\n\nhttps://www.facebook.com/Fabscan\n\n\nTwitter\n\n\nTweets about FabScan can be found on Twitter. \n\nhttps://www.twitter.com/l_k3", 
             "title": "Community"
         }, 
         {
+            "location": "/community/#slack", 
+            "text": "Use the FabScan Slack channel for direct messaging and chat communication.  https://fabscan.slack.com", 
+            "title": "Slack"
+        }, 
+        {
+            "location": "/community/#google-group", 
+            "text": "For general problems and information use the FabScan google group.  https://groups.google.com/forum/#!forum/fabscan", 
+            "title": "Google Group"
+        }, 
+        {
+            "location": "/community/#facebook", 
+            "text": "Like our Facebook Page. https://www.facebook.com/Fabscan", 
+            "title": "Facebook"
+        }, 
+        {
+            "location": "/community/#twitter", 
+            "text": "Tweets about FabScan can be found on Twitter.  https://www.twitter.com/l_k3", 
+            "title": "Twitter"
+        }, 
+        {
             "location": "/faq/", 
-            "text": "", 
+            "text": "TODO", 
             "title": "F.A.Q"
         }
     ]
