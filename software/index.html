@@ -353,6 +353,7 @@ setup and modify the values in your default.conf.json file if needed. </p>
 <p><strong>Remote access to change the configuration settings</strong></p>
 <p>It is most likely that you don't have a monitor nor mouse and keyboard connected to your FabScanPi all the time. But maybe you need to make some changes to the config file from time to time and you don't want to connect the peripherals everytime.</p>
 <p>This can be done via a remote PC which is connected to the same network.</p>
+<p><strong>Connecting as Windows User (Putty)</strong></p>
 <p>First of all you need to download the tiny program "PuTTY" from http://www.putty.org/.</p>
 <p>PuTTY is a SSH client program which establishes the connection to your FabScanPi. There is no no graphic user interface -only a console which allows only the exchange of text. But that's enough to make some changes in the config file or to update your FabScanPi-Software.</p>
 <p>You don't need to make an installation just put the putty.exe in a folder or your desktop. Of course you can start it directly from the download folder as well.</p>
@@ -362,6 +363,13 @@ setup and modify the values in your default.conf.json file if needed. </p>
 <p>Type in your IP-address in the appropriate field and click on "OPEN".</p>
 <p><img alt="Login" src="../images/Login.jpg" /></p>
 <p>Now the console window opens and you must type in "<strong>pi</strong>" as <strong>login-name</strong> and "<strong>raspberry</strong>" as <strong>password</strong> (without the quotes). Now you should be able to see the login prompt (similar to the picture above).</p>
+<p><strong>Connecting as Linux or OSX User (Terminal)</strong>
+Linux users can open a Terminal and type "<strong>ssh pi@fabscanpi.local</strong>"  ("<strong>sh pi@ip-address-of-you-pi</strong>"). 
+Next you are asked for a password. Type in "<strong>raspberry</strong>" as <strong>password</strong> (without the quotes).
+The next steps are described with screenshots for Putty, but the workflow is the same once the connection is 
+established.</p>
+<p><img alt="Login" src="../images/ssh_linux.png" /></p>
+<p><strong>Changing the config file.</strong></p>
 <p>The config file is in a different folder, so you must change into that folder by entering the command:</p>
 <p>cd /etc/fabscanpi/</p>
 <p>and press ENTER.</p>
