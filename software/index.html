@@ -77,13 +77,16 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#installation">Installation</a></li>
+                <li class="toctree-l3"><a href="#installing-the-software">Installing the Software</a></li>
                 
             
-                <li class="toctree-l3"><a href="#updates">Updates</a></li>
+                <li class="toctree-l3"><a href="#updating-the-software">Updating the Software</a></li>
                 
             
-                <li class="toctree-l3"><a href="#configuration">Configuration</a></li>
+                <li class="toctree-l3"><a href="#config-file-values">Config File Values</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-to-edit-the-config-file">How to Edit the Config File</a></li>
                 
                     <li><a class="toctree-l4" href="#troubleshooting">Troubleshooting</a></li>
                 
@@ -163,10 +166,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="installation">Installation</h1>
+                <h1 id="installing-the-software">Installing the Software</h1>
 <p>There ist no need to flash the Arduino firmware. It will be flashed automatically with the current
 firmware version after the server is started.</p>
-<p><span class="subheadline">Installation with FabScanPi Image (recommended)</span></p>
+<p><strong>Installation with FabScanPi Image (recommended)</strong></p>
 <p>The fastest way to start working with FabScan PI is to use the FabScan PI Raspbian Image. 
 Dowload the image and install it to a SD-Card. After the image is flashed and the Raspberry
 Pi is up and runnig follow the instructions in the <a href="https://github.com/mariolukas/FabScanPi-Server/blob/master/README.md#useage">Usage section</a></p>
@@ -174,7 +177,7 @@ Pi is up and runnig follow the instructions in the <a href="https://github.com/m
 <p><a href="https://github.com/mariolukas/FabScanPi-Build-Raspbian/releases/latest">https://github.com/mariolukas/FabScanPi-Build-Raspbian/releases/latest</a></p>
 <p>The image can be build with the FabScanPi Image build script. You will find more 
 information <a href="../developing/#Building FabScanPi Images">here</a></p>
-<p><span class="subheadline">Installing with fresh Raspbian and packages</span></p>
+<p><strong>Installing with fresh Raspbian and packages</strong></p>
 <p>This description assumes that you have a SD card with a fresh Raspbian image on it. </p>
 <p>First add the fabscan repository to your source list. </p>
 <pre><code>echo &quot;deb http://archive.fabscan.org/ jessie main&quot; &gt;&gt; /etc/apt/sources.list
@@ -197,7 +200,7 @@ information <a href="../developing/#Building FabScanPi Images">here</a></p>
 </code></pre>
 
 <p>Read <a href="https://github.com/mariolukas/FabScanPi-Server/blob/master/README.md#useage">Usage</a> section for the next steps.</p>
-<p><span class="subheadline">Installation: With Source Code</span></p>
+<p><strong>Installation: With Source Code</strong></p>
 <p>Dependencies</p>
 <p>FabScan PI software depends on some python libraries. You need to install pyserial, pykka, opencv with tbb support 
 and picamera. The easiest way to install all dependencies is to use debians package manager apt. Some of the packages, 
@@ -216,17 +219,17 @@ Install dependencies</p>
 <pre><code>dpkg -i fabscabpi-server&lt;package-version&gt;.deb
 </code></pre>
 
-<h1 id="updates">Updates</h1>
+<h1 id="updating-the-software">Updating the Software</h1>
 <p>Updates can be installed with debian's apt-get package manager. Log in via ssh and check/install 
 updates with the following command.</p>
 <pre><code>sudo apt-get update &amp;&amp; apt-get upgrade
 </code></pre>
 
-<h1 id="configuration">Configuration</h1>
+<h1 id="config-file-values">Config File Values</h1>
 <p>A configuration file can be found in /etc/fabscanpi/default.config.json. The content of this file 
 is in JSON format and can be edited with an editor of your choice (e.g. nano). Be careful and don't
 miss brackets. JSON is really sensitive in it's format.</p>
-<p><span class="subsubheadline">Folders</span></p>
+<p><strong>Folders</strong></p>
 <p>In this section you can change the scan output folder and the folder where the ui is located. If 
 you don't know what you are doing, it is a good decision to keep this section untouched.</p>
 <pre><code>   &quot;folders&quot; : {
@@ -235,7 +238,7 @@ you don't know what you are doing, it is a good decision to keep this section un
    }
 </code></pre>
 
-<p><span class="subsubheadline">Serial</span></p>
+<p><strong>Serial</strong></p>
 <p>In this section you can set your port. By default this value is not set, because the
 FabScanPi Server software autodetcts the correct port. Some Arduino and compatible boards differ 
 in the port name. The port can be set if you are not using an Arduino UNO or compatible Board. 
@@ -251,7 +254,7 @@ to False and flash the Firmware manually to your board. </p>
    }
 </code></pre>
 
-<p><span class="subsubheadline">Camera</span></p>
+<p><strong>Camera</strong></p>
 <p>In this section some camera values are set. The type can be set to PICAM which is default value. There is 
 also an experimental mode for a C270 webcam. But this mode is not further developed. I used it in early 
 versions of fabscanpi. </p>
@@ -290,7 +293,7 @@ of the FabScan setups. This value is used for tansforming image coordinates to w
    }
 </code></pre>
 
-<p><span class="subsubheadline">Laser</span></p>
+<p><strong>Laser</strong></p>
 <p>This section describes the laser position and laser stepper motor values. I mentioned position values in the section 
 before (Camera), have a look at the image. </p>
 <p>The angle is set to the angle which was used in the last scan. The rotation_steps value should be used for a laser 
@@ -308,7 +311,7 @@ set to 1/16 step mode. A motor with 200 steps per turn can then perform 3200 ste
    }
 </code></pre>
 
-<p><span class="subsubheadline">Turntable</span></p>
+<p><strong>Turntable</strong></p>
 <p>In this section some turntable related values are set. For positioning have a look to the image. 
 Steps defines how many steps can be perfomed for a full rotation. This value depends on your motor and driver.
 In the default case the motor is set to 1/16 step mode. A motor with 200 steps per turn can then perform 3200 steps.</p>
@@ -322,7 +325,7 @@ In the default case the motor is set to 1/16 step mode. A motor with 200 steps p
    },
 </code></pre>
 
-<p><span class="subsubheadline">Scanner</span></p>
+<p><strong>Scanner</strong></p>
 <p>This section defines global scanner related values. Origin is defined as the green horizontal line in the settings
 preview window. It is a also here a good idea to keep that value untouched. Process number defines how many processes
 should be used for calculating the scan data. Due the Raspberry Pi2 serves 4 cores it is a good idea to keep this
@@ -346,6 +349,37 @@ setup and modify the values in your default.conf.json file if needed. </p>
 <img alt="y values" src="../images/fabscan_dimensions_3.jpg" /></p>
 <p>X and Z values
 <img alt="x and z values" src="../images/fabscan_dimensions_2.jpg" /></p>
+<h1 id="how-to-edit-the-config-file">How to Edit the Config File</h1>
+<p><strong>Remote access to change the configuration settings</strong></p>
+<p>It is most likely that you don't have a monitor nor mouse and keyboard connected to your FabScanPi all the time. But maybe you need to make some changes to the config file from time to time and you don't want to connect the peripherals everytime.</p>
+<p>This can be done via a remote PC which is connected to the same network.</p>
+<p>First of all you need to download the tiny program "PuTTY" from http://www.putty.org/.</p>
+<p>PuTTY is a SSH client program which establishes the connection to your FabScanPi. There is no no graphic user interface -only a console which allows only the exchange of text. But that's enough to make some changes in the config file or to update your FabScanPi-Software.</p>
+<p>You don't need to make an installation just put the putty.exe in a folder or your desktop. Of course you can start it directly from the download folder as well.</p>
+<p>Now you must know the IP-address which has be assigned to your FabScanPi. It is the same address you're using to get access via the webbrowser (e.g. 192.168.1.8). Usually you can check the current IP-address in the user-interface of your web-router or cable modem.</p>
+<p>Start <strong>Putty.exe</strong> and a window will pop up.</p>
+<p><img alt="PuTTY_Menu" src="../images/PuTTY_Menu.jpg" /></p>
+<p>Type in your IP-address in the appropriate field and click on "OPEN".</p>
+<p><img alt="Login" src="../images/Login.jpg" /></p>
+<p>Now the console window opens and you must type in "<strong>pi</strong>" as <strong>login-name</strong> and "<strong>raspberry</strong>" as <strong>password</strong> (without the quotes). Now you should be able to see the login prompt (similar to the picture above).</p>
+<p>The config file is in a different folder, so you must change into that folder by entering the command:</p>
+<p>cd /etc/fabscanpi/</p>
+<p>and press ENTER.</p>
+<p>To view and modify the config file (default.config.json) you must open it with an editor and using administrator rights to be able to save the changes into the same file. The editor which is already installed is called nano. So type in:</p>
+<p><strong>sudo nano default.config.json</strong></p>
+<p><img alt="Open_Nano" src="../images/Open_Nano.jpg" /></p>
+<p>You have to enter the password "<strong>raspberry</strong>" (without the quotes) again, because you open the editor with administrator rights.</p>
+<p>The nano-editor now displays the config-file and maybe you have to enlarge the window to have a better view.</p>
+<p>Now you can perform the desired changes by using the keyboard. To navigate you have to use the up-, down-, left- and right-key.</p>
+<p><img alt="Config" src="../images/Config.jpg" /></p>
+<p>If you finished your modification press you can save the file by pressing and holding <strong>CTRL</strong> and <strong>O</strong> (german keyboard: STRG and O). Press RETURN to confirm the filename.</p>
+<p>Now you can exit the editor by pressing and holding <strong>CTRL</strong> and <strong>X</strong> (german keyboard: STRG and X).</p>
+<p>For the changes to take effect you must restart your FabScanPi by typing in the command</p>
+<p><strong>sudo reboot</strong></p>
+<p>and ENTER.</p>
+<p><img alt="Reboot" src="../images/Reboot.jpg" /></p>
+<p>You can now close the PuTTY window.</p>
+<p>The FabScanPi is rebooting and after a short time you can refresh your webbrowser and start using the FabScanPi with the new config settings.</p>
 <h3 id="troubleshooting">Troubleshooting</h3>
 <p>Can not connect to Arduino.
 Is the Arduino connected to the USB port. Check the port in your fabscanpi-server configuration
