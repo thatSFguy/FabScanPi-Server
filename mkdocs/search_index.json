@@ -22,23 +22,48 @@
         }, 
         {
             "location": "/hardware/", 
-            "text": "Part List\n\n\nTODO\n\n\nCase\n\n\nThe laser cut files can be found at \nhttps://github.com/mariolukas/FabScan-Case\n\n\n\n\n\n\nAssembly\n\nTODO\n\n\nElectronics\n\n\nFabScanPi HAT\n\n\n\n\nMotor connector\n\nTODO\n\n\nLaser connectors\n\nTODO\n\n\nLED connector\n\nTODO\n\n\nSafety switch\n\nTODO\n\n\nServo connectors\n\nTODO", 
+            "text": "Bill of Materials\n\n\n\n\nRaspberry Pi 2 or Raspberry Pi 3\n\n\nStepper Motor 1.8\u00b0 step angle (200 steps/revolution)\n\n\nPololu Universal Aluminum Mounting Hub for 5mm Shaft\n\n\nMotor driver (\nSilent Step Stick\n recommended)\n\n\n5V red line laser module\n\n\n9g Servo Motor (not supported by the software now)\n\n\nFabScanPi HAT\n for Raspberry Pi\n\n\nFabScanPi Camera Mount\n with LED ring\n\n\nFaBScanPi Case\n\n\n\n\nHow to Assmble the Cabinet\n\n\nThe laser cut files can be found at \nhttps://github.com/mariolukas/FabScan-Case\n\n\n\n\n\n\nThe FabScanPi HAT\n\n\nThe FabScan HAT is basically a combination of an Arduino and the old\nFabScan Shield for Arduino. It provides all connectors for the hardware\nparts (like motors, servos, lasers, LED's etc.) Instead of an USB \nconnection to the Raspberry Pi, the HAT is put on the Pi's pinheaders.\nThe HAT communicates over a serial connection with the Rasperry Pi. \n(GPIO14 and GPIO15 of the Raspberry Pi). The firmware and also updates are \nflashed automatically by the FabscanPi-Server application.\n\n\n\n\nConnecting the Stepper Motor\n\n\nThere are different kinds of stepper motos. Mostly with 4 or 6 leads. For\nconnecting the stepper motor to the FabScanPi HAT you need to know the\ncorresponding lead pairs of the motor coils. The best way to find out something\nabout the motor is to have a look at the datasheet of the motor manufacturer.\nIn the following desciptions the pairs are called (1A, 1B) and (2A, 2B).\n\n\n \n\n\n\nThere are several ways to find the pair wires without a datasheet. Some of them\nare described here:\n\n\nMethod with an ohm-meter\n\n\nSimply measure pairs of wires for their resistance. If the resistance is a few ohms \n( \n 100 \u03a9) only, you've found a pair. The other two wires should make up the other pair.\n\n\nMethods without an ohm-meter\n\n\nFirst, try turning the motor with your fingers, and notice how hard it is. Then, \nstick wires together in pairs. If the motor turns noticeable harder, you've found a pair.\nAnother method is to use an LED, hold any two wires to the ends of a LED and turn the \nmotor (twiddle in both directions), the LED will light if the wires are a pair, \nswap wires until you light the LED.\n\n\n\n\nConnecting the Lasers\n\n\nThe FabScanPi HAT provides connectors for two lasers. But only one laser\nis supportet until now. Connect your laser to the connectors labeled\nwith ...\n\n\n\n\nSafety switch\n\n\nThere is the possibility to add a laser safety switch which disables the laser\nwhen the lid is opened. The FabScanPi HAT provides a connector for such a switch.\nIf you don't need a switch you still have to bridge this connector with \na cable to get the lasers work. (see images)\n\n\n\n\n\n\nConnecting the Motor drivers\n\n\nHow to Connect the LED Ring\n\n\nTODO\n\n\nAdditional Motors for the Lasers\n\n\nThere are connectors for", 
             "title": "Hardware"
         }, 
         {
-            "location": "/hardware/#part-list", 
+            "location": "/hardware/#bill-of-materials", 
+            "text": "Raspberry Pi 2 or Raspberry Pi 3  Stepper Motor 1.8\u00b0 step angle (200 steps/revolution)  Pololu Universal Aluminum Mounting Hub for 5mm Shaft  Motor driver ( Silent Step Stick  recommended)  5V red line laser module  9g Servo Motor (not supported by the software now)  FabScanPi HAT  for Raspberry Pi  FabScanPi Camera Mount  with LED ring  FaBScanPi Case", 
+            "title": "Bill of Materials"
+        }, 
+        {
+            "location": "/hardware/#how-to-assmble-the-cabinet", 
+            "text": "The laser cut files can be found at  https://github.com/mariolukas/FabScan-Case", 
+            "title": "How to Assmble the Cabinet"
+        }, 
+        {
+            "location": "/hardware/#the-fabscanpi-hat", 
+            "text": "The FabScan HAT is basically a combination of an Arduino and the old\nFabScan Shield for Arduino. It provides all connectors for the hardware\nparts (like motors, servos, lasers, LED's etc.) Instead of an USB \nconnection to the Raspberry Pi, the HAT is put on the Pi's pinheaders.\nThe HAT communicates over a serial connection with the Rasperry Pi. \n(GPIO14 and GPIO15 of the Raspberry Pi). The firmware and also updates are \nflashed automatically by the FabscanPi-Server application.", 
+            "title": "The FabScanPi HAT"
+        }, 
+        {
+            "location": "/hardware/#connecting-the-stepper-motor", 
+            "text": "There are different kinds of stepper motos. Mostly with 4 or 6 leads. For\nconnecting the stepper motor to the FabScanPi HAT you need to know the\ncorresponding lead pairs of the motor coils. The best way to find out something\nabout the motor is to have a look at the datasheet of the motor manufacturer.\nIn the following desciptions the pairs are called (1A, 1B) and (2A, 2B).     There are several ways to find the pair wires without a datasheet. Some of them\nare described here:  Method with an ohm-meter  Simply measure pairs of wires for their resistance. If the resistance is a few ohms \n(   100 \u03a9) only, you've found a pair. The other two wires should make up the other pair.  Methods without an ohm-meter  First, try turning the motor with your fingers, and notice how hard it is. Then, \nstick wires together in pairs. If the motor turns noticeable harder, you've found a pair.\nAnother method is to use an LED, hold any two wires to the ends of a LED and turn the \nmotor (twiddle in both directions), the LED will light if the wires are a pair, \nswap wires until you light the LED.", 
+            "title": "Connecting the Stepper Motor"
+        }, 
+        {
+            "location": "/hardware/#connecting-the-lasers", 
+            "text": "The FabScanPi HAT provides connectors for two lasers. But only one laser\nis supportet until now. Connect your laser to the connectors labeled\nwith ...   Safety switch  There is the possibility to add a laser safety switch which disables the laser\nwhen the lid is opened. The FabScanPi HAT provides a connector for such a switch.\nIf you don't need a switch you still have to bridge this connector with \na cable to get the lasers work. (see images)", 
+            "title": "Connecting the Lasers"
+        }, 
+        {
+            "location": "/hardware/#connecting-the-motor-drivers", 
+            "text": "", 
+            "title": "Connecting the Motor drivers"
+        }, 
+        {
+            "location": "/hardware/#how-to-connect-the-led-ring", 
             "text": "TODO", 
-            "title": "Part List"
+            "title": "How to Connect the LED Ring"
         }, 
         {
-            "location": "/hardware/#case", 
-            "text": "The laser cut files can be found at  https://github.com/mariolukas/FabScan-Case    Assembly \nTODO", 
-            "title": "Case"
-        }, 
-        {
-            "location": "/hardware/#electronics", 
-            "text": "FabScanPi HAT   Motor connector \nTODO  Laser connectors \nTODO  LED connector \nTODO  Safety switch \nTODO  Servo connectors \nTODO", 
-            "title": "Electronics"
+            "location": "/hardware/#additional-motors-for-the-lasers", 
+            "text": "There are connectors for", 
+            "title": "Additional Motors for the Lasers"
         }, 
         {
             "location": "/software/", 

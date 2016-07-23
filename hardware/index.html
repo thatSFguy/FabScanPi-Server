@@ -70,13 +70,28 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#part-list">Part List</a></li>
+                <li class="toctree-l3"><a href="#bill-of-materials">Bill of Materials</a></li>
                 
             
-                <li class="toctree-l3"><a href="#case">Case</a></li>
+                <li class="toctree-l3"><a href="#how-to-assmble-the-cabinet">How to Assmble the Cabinet</a></li>
                 
             
-                <li class="toctree-l3"><a href="#electronics">Electronics</a></li>
+                <li class="toctree-l3"><a href="#the-fabscanpi-hat">The FabScanPi HAT</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#connecting-the-stepper-motor">Connecting the Stepper Motor</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#connecting-the-lasers">Connecting the Lasers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#connecting-the-motor-drivers">Connecting the Motor drivers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-to-connect-the-led-ring">How to Connect the LED Ring</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#additional-motors-for-the-lasers">Additional Motors for the Lasers</a></li>
                 
             
             </ul>
@@ -155,27 +170,68 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="part-list">Part List</h1>
-<p>TODO</p>
-<h1 id="case">Case</h1>
+                <h1 id="bill-of-materials">Bill of Materials</h1>
+<ul>
+<li>Raspberry Pi 2 or Raspberry Pi 3</li>
+<li>Stepper Motor 1.8° step angle (200 steps/revolution)</li>
+<li>Pololu Universal Aluminum Mounting Hub for 5mm Shaft</li>
+<li>Motor driver (<a href="http://www.watterott.com/de/SilentStepStick">Silent Step Stick</a> recommended)</li>
+<li>5V red line laser module</li>
+<li>9g Servo Motor (not supported by the software now)</li>
+<li><a href="http://www.watterott.com/en/RPi-FabScan-HAT">FabScanPi HAT</a> for Raspberry Pi</li>
+<li><a href="http://www.watterott.com/index.php?page=product&amp;info=4930">FabScanPi Camera Mount</a> with LED ring</li>
+<li><a href="http://www.watterott.com/en/FabScan-Pi-Housing-Parts">FaBScanPi Case</a></li>
+</ul>
+<h1 id="how-to-assmble-the-cabinet">How to Assmble the Cabinet</h1>
 <p>The laser cut files can be found at <a href="https://github.com/mariolukas/FabScan-Case">https://github.com/mariolukas/FabScan-Case</a></p>
 <p><img alt="drawing_200" src="../images/FabScanPI_closed.jpg" />
 <img alt="drawing_200" src="../images/FabScanPi_opened.jpg" /></p>
-<p><strong>Assembly</strong>
-TODO</p>
-<h1 id="electronics">Electronics</h1>
-<p><strong>FabScanPi HAT</strong></p>
+<h1 id="the-fabscanpi-hat">The FabScanPi HAT</h1>
+<p>The FabScan HAT is basically a combination of an Arduino and the old
+FabScan Shield for Arduino. It provides all connectors for the hardware
+parts (like motors, servos, lasers, LED's etc.) Instead of an USB 
+connection to the Raspberry Pi, the HAT is put on the Pi's pinheaders.
+The HAT communicates over a serial connection with the Rasperry Pi. 
+(GPIO14 and GPIO15 of the Raspberry Pi). The firmware and also updates are 
+flashed automatically by the FabscanPi-Server application.</p>
 <p><img alt="drawing_400" src="../images/fabscanpihat.png" /></p>
-<p><strong>Motor connector</strong>
-TODO</p>
-<p><strong>Laser connectors</strong>
-TODO</p>
-<p><strong>LED connector</strong>
-TODO</p>
-<p><strong>Safety switch</strong>
-TODO</p>
-<p><strong>Servo connectors</strong>
-TODO</p>
+<h1 id="connecting-the-stepper-motor">Connecting the Stepper Motor</h1>
+<p>There are different kinds of stepper motos. Mostly with 4 or 6 leads. For
+connecting the stepper motor to the FabScanPi HAT you need to know the
+corresponding lead pairs of the motor coils. The best way to find out something
+about the motor is to have a look at the datasheet of the motor manufacturer.
+In the following desciptions the pairs are called (1A, 1B) and (2A, 2B).</p>
+<p><img alt="drawing_300" src="../images/4wires.jpg" /> 
+<img alt="drawing_300" src="../images/6wires.jpg" /></p>
+<p>There are several ways to find the pair wires without a datasheet. Some of them
+are described here:</p>
+<p><strong>Method with an ohm-meter</strong></p>
+<p>Simply measure pairs of wires for their resistance. If the resistance is a few ohms 
+( &lt; 100 Ω) only, you've found a pair. The other two wires should make up the other pair.</p>
+<p><strong>Methods without an ohm-meter</strong></p>
+<p>First, try turning the motor with your fingers, and notice how hard it is. Then, 
+stick wires together in pairs. If the motor turns noticeable harder, you've found a pair.
+Another method is to use an LED, hold any two wires to the ends of a LED and turn the 
+motor (twiddle in both directions), the LED will light if the wires are a pair, 
+swap wires until you light the LED.</p>
+<p><img alt="drawing_400" src="../images/hat_wires.jpg" /></p>
+<h1 id="connecting-the-lasers">Connecting the Lasers</h1>
+<p>The FabScanPi HAT provides connectors for two lasers. But only one laser
+is supportet until now. Connect your laser to the connectors labeled
+with ...</p>
+<p><img alt="drawing_450" src="../images/laser_connection.jpg" /></p>
+<p><strong>Safety switch</strong></p>
+<p>There is the possibility to add a laser safety switch which disables the laser
+when the lid is opened. The FabScanPi HAT provides a connector for such a switch.
+If you don't need a switch you still have to bridge this connector with 
+a cable to get the lasers work. (see images)</p>
+<p><img alt="test" src="../images/laser_safety.jpg" />
+<img alt="test" src="../images/laser_safety_switch.jpg" /></p>
+<h1 id="connecting-the-motor-drivers">Connecting the Motor drivers</h1>
+<h1 id="how-to-connect-the-led-ring">How to Connect the LED Ring</h1>
+<p>TODO</p>
+<h1 id="additional-motors-for-the-lasers">Additional Motors for the Lasers</h1>
+<p>There are connectors for </p>
               
             </div>
           </div>
