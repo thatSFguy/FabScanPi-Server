@@ -211,12 +211,12 @@
             "title": "Other"
         }, 
         {
-            "location": "/faq/#softwarewzxhzdk0wzxhzdk1", 
+            "location": "/faq/#software_1", 
             "text": "What are the standard values in the config-file for the box dimensions?   The values may vary a bit, depending on your assembly. But for getting started these values can be used:      x-value  y-value  z-value      Camera  0  6.6  24    Laser  10  7.3  20    Turntable  0  0  7.5    Scanner origin  n/a  0.69  n/a         Frame value      Frame dimension  24     Note: Unit for all values is centimeters [cm].", 
             "title": "Software"
         }, 
         {
-            "location": "/faq/#hardwarewzxhzdk2wzxhzdk3", 
+            "location": "/faq/#hardware_1", 
             "text": "", 
             "title": "Hardware"
         }, 
@@ -246,7 +246,7 @@
             "title": "I have a Raspberry Cam Module with NoIR. Can I use it?"
         }, 
         {
-            "location": "/faq/#scanning-issueswzxhzdk4wzxhzdk5", 
+            "location": "/faq/#scanning-issues_1", 
             "text": "", 
             "title": "Scanning issues"
         }, 
@@ -276,7 +276,7 @@
             "title": "The scans don\u2019t have the same shape as the original."
         }, 
         {
-            "location": "/faq/#otherwzxhzdk6wzxhzdk7", 
+            "location": "/faq/#other_1", 
             "text": "tbd.", 
             "title": "Other"
         }
