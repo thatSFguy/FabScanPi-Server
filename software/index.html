@@ -94,17 +94,7 @@
                 <li class="toctree-l3"><a href="#setting-up-a-wifi-connection">Setting up a WIFI connection</a></li>
                 
             
-                <li class="toctree-l3"><a href="#user-manual">User Manual</a></li>
-                
-                    <li><a class="toctree-l4" href="#getting-started">Getting Started</a></li>
-                
-                    <li><a class="toctree-l4" href="#presets">Presets</a></li>
-                
-                    <li><a class="toctree-l4" href="#perform-a-scan">Perform a scan</a></li>
-                
-                    <li><a class="toctree-l4" href="#generate-mesh">Generate Mesh</a></li>
-                
-                    <li><a class="toctree-l4" href="#file-operations">File Operations</a></li>
+                <li class="toctree-l3"><a href="#software-user-manual">Software User Manual</a></li>
                 
             
             </ul>
@@ -480,8 +470,24 @@ iface default inet dhcp
 <pre><code>sudo /etc/init.d/networking restart
 </code></pre>
 
-<h1 id="user-manual">User Manual</h1>
-<hr />
+<h1 id="software-user-manual">Software User Manual</h1>
+<ul>
+<li>
+<p><a href="#gettingStarted">Getting Started</a></p>
+</li>
+<li>
+<p><a href="#presets">Presets</a></p>
+</li>
+<li>
+<p><a href="#performAScan">Perform a scan</a></p>
+</li>
+<li>
+<p><a href="#generateMesh">Generate Mesh</a></p>
+</li>
+<li>
+<p><a href="#fileOperations">File Operations</a></p>
+</li>
+</ul>
 <p>FabScan Pi is tested on: </p>
 <table>
 <thead>
@@ -509,7 +515,7 @@ iface default inet dhcp
 </tr>
 </tbody>
 </table>
-<h4 id="getting-started">Getting Started<a name="gettingStarted"></a></h4>
+<p><strong>Getting Started<a name="gettingStarted"></a></strong></p>
 <ul>
 <li>
 <p>By default the FabScanPi server binds to all interfaces on port 8080. Pointing your browser to http://ip-of-your-raspberry-pi:8080 will open the user interface. 
@@ -522,9 +528,8 @@ iface default inet dhcp
 </ul>
 <p><img alt="main_menu" src="../images/Manual_1.jpg" /></p>
 <p>Now your FabScanPI is ready.</p>
-<hr />
-<h4 id="presets">Presets<a name="presets"></a></h4>
-<p>Note: The current settings are only persistent as long as the pi is up and running. The settings are saved with the scan data after a successful scan. They can be loaded to scan another object with the same settings. E.g. an object what consists of the same material, color etc. </p>
+<p><strong>Presets<a name="presets"></a></strong></p>
+<p>The current settings are only persistent as long as the pi is up and running. The settings are saved with the scan data after a successful scan. They can be loaded to scan another object with the same settings. E.g. an object what consists of the same material, color etc. </p>
 <ul>
 <li>Click on the duckling-symbol to open the scan menu.</li>
 </ul>
@@ -545,8 +550,7 @@ Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
 <img alt="scan_menu" src="../images/Manual_5a.jpg" /></p>
 <p>The preview in the lower left corner is showing the camera view completed with calibration bars. This preview must be used for aligning the camera after the assembly of the scanner. When the scan results are not flawless this menu can be used to check the correct adjustment.
 <img alt="alignment_menu" src="../images/Manual_8.jpg" /></p>
-<hr />
-<h4 id="perform-a-scan">Perform a scan<a name="performAScan"></a></h4>
+<p><strong>Perform a scan<a name="performAScan"></a></strong></p>
 <p><strong>Color Scan</strong><a name="colorScan"></a></p>
 <ul>
 <li>Make sure your FabScanPi is switched on, an object is placed on the turntable and the lid / the optional laser safety switch is closed.</li>
@@ -574,7 +578,6 @@ Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
 <ul>
 <li>You can now check, download or delete the scan-data.</li>
 </ul>
-<p>​</p>
 <p><strong>Monochrome scan</strong><a name="monochromeScan"></a></p>
 <ul>
 <li>Make sure your FabScanPi is switched on, an object is placed on the turntable and the lid / the optional laser safety switch is closed.</li>
@@ -598,9 +601,8 @@ Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
 <ul>
 <li>You can now check, download or delete the scan-data.</li>
 </ul>
-<p>​</p>
-<hr />
-<h4 id="generate-mesh">Generate Mesh<a name="generateMesh"></a></h4>
+<p>​
+** Generate Mesh<a name="generateMesh"></a></p>
 <p>The FabScanPi software includes a feature to convert a scan into a mesh-file. This mesh-file can be used for 3D-printing.
 Note: To generate a mesh-file a scan must have been performed. It is also possible to load a scan-file which has been saved previously. </p>
 <ul>
@@ -646,9 +648,8 @@ Note: Depending on the size and complexity of the scan file as well as the type 
 <li>You can now click on the download-icon to download the mesh-file to your computer or click on the trashbasket icon to delete the mesh-file.
   <img alt="open_options_menu" src="../images/Manual_CreateMash_8.jpg" /></li>
 </ul>
-<p>​</p>
-<hr />
-<h4 id="file-operations">File Operations<a name="fileOperations"></a></h4>
+<p>​
+** File Operations<a name="fileOperations"></a></p>
 <ul>
 <li>Load files<a name="loadFiles"></a></li>
 </ul>
