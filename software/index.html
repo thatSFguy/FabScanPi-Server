@@ -94,7 +94,17 @@
                 <li class="toctree-l3"><a href="#setting-up-a-wifi-connection">Setting up a WIFI connection</a></li>
                 
             
-                <li class="toctree-l3"><a href="#software-user-manual">Software User Manual</a></li>
+                <li class="toctree-l3"><a href="#user-manual">User Manual</a></li>
+                
+                    <li><a class="toctree-l4" href="#getting-started">Getting Started</a></li>
+                
+                    <li><a class="toctree-l4" href="#presets">Presets</a></li>
+                
+                    <li><a class="toctree-l4" href="#perform-a-scan">Perform a scan</a></li>
+                
+                    <li><a class="toctree-l4" href="#generate-mesh">Generate Mesh</a></li>
+                
+                    <li><a class="toctree-l4" href="#file-operations">File Operations</a></li>
                 
             
             </ul>
@@ -470,25 +480,7 @@ iface default inet dhcp
 <pre><code>sudo /etc/init.d/networking restart
 </code></pre>
 
-<h1 id="_1"></h1>
-<h1 id="software-user-manual">Software User Manual</h1>
-<ul>
-<li>
-<p><a href="#gettingStarted">Getting Started</a></p>
-</li>
-<li>
-<p><a href="#presets">Presets</a></p>
-</li>
-<li>
-<p><a href="#performAScan">Perform a scan</a></p>
-</li>
-<li>
-<p><a href="#generateMesh">Generate Mesh</a></p>
-</li>
-<li>
-<p><a href="#fileOperations">File Operations</a></p>
-</li>
-</ul>
+<h1 id="user-manual">User Manual</h1>
 <hr />
 <p>FabScan Pi is tested on: </p>
 <table>
@@ -517,7 +509,7 @@ iface default inet dhcp
 </tr>
 </tbody>
 </table>
-<p><strong>Getting Started<a name="gettingStarted"></a></strong></p>
+<h4 id="getting-started">Getting Started<a name="gettingStarted"></a></h4>
 <ul>
 <li>
 <p>By default the FabScanPi server binds to all interfaces on port 8080. Pointing your browser to http://ip-of-your-raspberry-pi:8080 will open the user interface. 
@@ -528,33 +520,33 @@ iface default inet dhcp
   Note: The messages will fade away after a short period of time.</p>
 </li>
 </ul>
-<p>​
-  <img alt="fig.: main menu" src="../images/Manual_1.jpg" /></p>
+<p><img alt="main_menu" src="../images/Manual_1.jpg" /></p>
 <p>Now your FabScanPI is ready.</p>
-<p><strong>Presets<a name="presets"></a></strong></p>
+<hr />
+<h4 id="presets">Presets<a name="presets"></a></h4>
 <p>Note: The current settings are only persistent as long as the pi is up and running. The settings are saved with the scan data after a successful scan. They can be loaded to scan another object with the same settings. E.g. an object what consists of the same material, color etc. </p>
 <ul>
 <li>Click on the duckling-symbol to open the scan menu.</li>
 </ul>
-<p><img alt="fig.: open the scan menu" src="../images/Manual_4.jpg" /></p>
+<p><img alt="open_the_scan_menu" src="../images/Manual_4.jpg" /></p>
 <ul>
 <li>The threshold-slider (5) can be used to adjust the sensitivity of the captured data. Select the scan quality by using the other slider (6). 
   Note: The better the scan the longer is the required capture time. Sometimes it is better to start with a low resolution to control the selected settings result. If the result is nice you can perform a higher resolution scan with the same settings.</li>
 </ul>
-<p>​
-  <img alt="fig.: scan menu" src="../images/Manual_5a.jpg" /></p>
+<p><img alt="scan_menu" src="../images/Manual_5a.jpg" /></p>
 <p>By clicking on the contrast-icon (3) you will get access to the camera settings menu. For adjusting the camera presets three sliders for saturation, brightness and contrast are available.</p>
-<p><img alt="fig.: camera settings menu" src="../images/Manual_6.jpg" /></p>
+<p><img alt="camera_settings_menu" src="../images/Manual_6.jpg" /></p>
 <p>Click on the light-symbol (4) to get access to the lighting menu.</p>
-<p><img alt="fig.: scan menu" src="../images/Manual_5a.jpg" /></p>
+<p><img alt="scan_menu" src="../images/Manual_5a.jpg" /></p>
 <p>Here you can use the sliders to change the brightness and color of the (optional) light source. When all three sliders are at the very left end the light is off. Watch the preview in the lower left corner of the menu.
-<img alt="fig.: lighting menu" src="../images/Manual_7.jpg" /></p>
+<img alt="lighting_menu" src="../images/Manual_7.jpg" /></p>
 <p>Note: The setting in the lighting menu will only cause an effect if an optional WS2812-compatible light source (e.g. Adafruit NeoPixel LED-Ring or FabScanPi-Camera-Holder) is installed.
 Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
-<img alt="fig.: scan menu" src="../images/Manual_5a.jpg" /></p>
+<img alt="scan_menu" src="../images/Manual_5a.jpg" /></p>
 <p>The preview in the lower left corner is showing the camera view completed with calibration bars. This preview must be used for aligning the camera after the assembly of the scanner. When the scan results are not flawless this menu can be used to check the correct adjustment.
-<img alt="fig.: alignment menu" src="../images/Manual_8.jpg" /></p>
-<p><strong>Perform a scan<a name="performAScan"></a></strong></p>
+<img alt="alignment_menu" src="../images/Manual_8.jpg" /></p>
+<hr />
+<h4 id="perform-a-scan">Perform a scan<a name="performAScan"></a></h4>
 <p><strong>Color Scan</strong><a name="colorScan"></a></p>
 <ul>
 <li>Make sure your FabScanPi is switched on, an object is placed on the turntable and the lid / the optional laser safety switch is closed.</li>
@@ -562,24 +554,23 @@ Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
   <a href="#gettingStarted">Getting Started</a>.</li>
 <li>Click on the duckling-symbol to open the scan menu.</li>
 </ul>
-<p><img alt="fig.: open the scan menu" src="../images/Manual_4.jpg" /></p>
+<p><img alt="open_scan_menu" src="../images/Manual_4.jpg" /></p>
 <p>Note: If you do not have installed a light source you should perform a <a href="#monochromeScan">monochrome scan</a>.</p>
 <ul>
 <li>Adjust the scan preset values to your needs as described in chapter <a href="#presets">Presets</a>.</li>
 </ul>
-<p><img alt="fig.: scan menu" src="../images/Manual_TextureScan_1.jpg" /></p>
+<p><img alt="scan_menu" src="../images/Manual_TextureScan_1.jpg" /></p>
 <ul>
 <li>Click on “Start Scan” to initiate the process
   A starting message will be displayed. Now the texture will be processed.</li>
 </ul>
-<p>​
-  <img alt="fig.: texture capturing" src="../images/Manual_TextureScan_2.jpg" /></p>
+<p><img alt="texture_capturing" src="../images/Manual_TextureScan_2.jpg" /></p>
 <p>The latest photo will be displayed during the capturing process.</p>
-<p><img alt="fig.: scan starts" src="../images/Manual_TextureScan_3.jpg" /></p>
+<p><img alt="capturing_starts" src="../images/Manual_TextureScan_3.jpg" /></p>
 <p>When the texture has been captured (progress bar at 50 percent) the actual scan is initiated. A notification is displayed.
-<img alt="fig.: scan starts" src="../images/Manual_TextureScan_4.jpg" /></p>
+<img alt="scan_starts" src="../images/Manual_TextureScan_4.jpg" /></p>
 <p>A notification will be displayed when the scan is completed / file is saved.
-<img alt="fig.: scan completed" src="../images/Manual_TextureScan_5.jpg" /></p>
+<img alt="scan_completed" src="../images/Manual_TextureScan_5.jpg" /></p>
 <ul>
 <li>You can now check, download or delete the scan-data.</li>
 </ul>
@@ -591,57 +582,104 @@ Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
   <a href="#gettingStarted">Getting Started</a>.</li>
 <li>Click on the duckling-symbol to open the scan menu.</li>
 </ul>
-<p><img alt="fig.: open the scan menu" src="../images/Manual_4.jpg" /></p>
+<p><img alt="open_scan_menu" src="../images/Manual_4.jpg" /></p>
 <ul>
 <li>Adjust the scan preset values to your needs as described in chapter <a href="#presets">Presets</a>.</li>
 <li>Uncheck the color-scan option (8)</li>
 </ul>
-<p><img alt="fig.: scan menu" src="../images/Manual_5a.jpg" /></p>
+<p><img alt="scan_menu" src="../images/Manual_5a.jpg" /></p>
 <ul>
 <li>Click on “Start Scan” to initiate the process
   A starting message will be displayed and the scan process is started.</li>
 </ul>
-<p><img alt="fig.: scan starts" src="../images/Manual_Scan_2.jpg" /></p>
+<p><img alt="scan_starts" src="../images/Manual_Scan_2.jpg" /></p>
 <p>When the scan is completed / file is saved a notification will be displayed. 
-<img alt="fig.: scan completed" src="../images/Manual_Scan_3.jpg" /></p>
+<img alt="scan_completed" src="../images/Manual_Scan_3.jpg" /></p>
 <ul>
 <li>You can now check, download or delete the scan-data.</li>
 </ul>
-<p>** Generate Mesh<a name="generateMesh"></a></p>
+<p>​</p>
+<hr />
+<h4 id="generate-mesh">Generate Mesh<a name="generateMesh"></a></h4>
 <p>The FabScanPi software includes a feature to convert a scan into a mesh-file. This mesh-file can be used for 3D-printing.
 Note: To generate a mesh-file a scan must have been performed. It is also possible to load a scan-file which has been saved previously. </p>
-<p>** File Operations<a name="fileOperations"></a></p>
+<ul>
+<li>Click on the options icon to open the options menu.
+  <img alt="open_options_menu" src="../images/Manual_CreateMash_1.jpg" /></li>
+</ul>
+<p>​</p>
+<ul>
+<li>The options menu will open and you can see the index card of the loaded file.
+  <img alt="open_options_menu" src="../images/Manual_CreateMash_1.jpg" /></li>
+</ul>
+<p>​</p>
+<ul>
+<li>Click on the magic wand icon to open the menu for the MeshLab filter.
+  <img alt="open_options_menu" src="../images/Manual_CreateMash_3.jpg" /></li>
+</ul>
+<p>​</p>
+<ul>
+<li>
+<p>Now select one of the Meshlab filters and the file format for the future mesh file.</p>
+</li>
+<li>
+<p>Click on "Start Meshing" to activate the conversion process. 
+  <img alt="open_options_menu" src="../images/Manual_CreateMash_4.jpg" /></p>
+</li>
+</ul>
+<p>The conversion starts and the main menu appears. A notification is displayed as well.
+Note: Depending on the size and complexity of the scan file as well as the type of selected filter the conversion process may take some time.
+<img alt="open_options_menu" src="../images/Manual_CreateMash_5.jpg" /></p>
+<p>When the mesh-file is available a notification is displayed.
+<img alt="open_options_menu" src="../images/Manual_CreateMash_6.jpg" /></p>
+<ul>
+<li>
+<p>Again open the options menu. Another index card for the mesh-file has been added.</p>
+</li>
+<li>
+<p>Click on the mesh-file index card.
+  <img alt="open_options_menu" src="../images/Manual_CreateMash_7.jpg" /></p>
+</li>
+</ul>
+<p>​</p>
+<ul>
+<li>You can now click on the download-icon to download the mesh-file to your computer or click on the trashbasket icon to delete the mesh-file.
+  <img alt="open_options_menu" src="../images/Manual_CreateMash_8.jpg" /></li>
+</ul>
+<p>​</p>
+<hr />
+<h4 id="file-operations">File Operations<a name="fileOperations"></a></h4>
 <ul>
 <li>Load files<a name="loadFiles"></a></li>
 </ul>
 <p>A scan result which has been saved to the FabScanPi memory previously can be reloaded. Go to the main menu and click on the folder-icon at the left side of the menu bar.
-<img alt="fig.: main menu - load scan" src="../images/Manual_LoadScan_1.jpg" /></p>
+<img alt="main_menu-load_scan" src="../images/Manual_LoadScan_1.jpg" /></p>
 <ul>
 <li>Scroll through the displayed file inventory and click on the icon of the wanted file.</li>
 </ul>
-<p><img alt="fig.: load scan" src="../images/Manual_LoadScan_2.jpg" /></p>
+<p><img alt="load_scan" src="../images/Manual_LoadScan_2.jpg" /></p>
 <p>Now the selected file will be loaded which may need some time. After the loading process is finished a notification will be displayed.
-<img alt="fig.: loaded scan-file" src="../images/Manual_LoadScan_3.jpg" /></p>
+<img alt="loaded_scan-file" src="../images/Manual_LoadScan_3.jpg" /></p>
 <ul>
 <li>Delete files<a name="deleteFiles"></a></li>
 </ul>
 <p><strong>Delete a scan-file</strong>
 A scan result which has been saved to the FabScanPi memory previously can be deleted. To do that it must be loaded and displayed on the virtual turntable in the main menu.
 -Click on the options-icon on the right side of the menu bar.
-<img alt="fig.: delete files" src="../images/Manual_CreateMash_1.jpg" /></p>
+<img alt="delete_files" src="../images/Manual_CreateMash_1.jpg" /></p>
 <p>Click on the wastebasket-icon to delete the scan-file.
 NOTE: By deleting a scan file the corresponding mesh file (if available) will be deleted instantly.</p>
 <p><strong>Delete a mesh-file</strong>
 Note: If a mesh file is available a second slide for the mesh file will be displayed.
-<img alt="fig.: mesh slide available" src="../images/Manual_CreateMash_1.jpg" /></p>
+<img alt="mesh_slide_available" src="../images/Manual_CreateMash_1.jpg" /></p>
 <p>By selecting the mesh slide and clicking on the wastebasket-icon the mesh-file can be deleted separately. 
-<img alt="fig.: loaded scan-file" src="../images/Manual_DeleteScan_1.jpg" /></p>
+<img alt="loaded_scan-file" src="../images/Manual_DeleteScan_1.jpg" /></p>
 <ul>
 <li>Download Files<a name="downloadFiles"></a>
   It is possible to download generated files (either scan- or mesh-files) from the FabScanPi via the web-based user interface. </li>
 </ul>
 <p>​</p>
-<p><strong>Scan-file</strong>
+<p><strong>Download a scan-file</strong>
 Note: Before you can download a file it must be <a href="#loadFiles">loaded</a> and displayed on the virtual turntable in the main menu.</p>
 <ul>
 <li>
@@ -651,8 +689,7 @@ Note: Before you can download a file it must be <a href="#loadFiles">loaded</a> 
 <p>Click on the options-icon on the right side of the menu bar.</p>
 </li>
 </ul>
-<p>​
-  <img alt="fig.: delete files" src="../images/Manual_CreateMash_1.jpg" /></p>
+<p><img alt="delete_files" src="../images/Manual_CreateMash_1.jpg" /></p>
 <ul>
 <li>
 <p>Click on the download-icon to download the mesh-file</p>
@@ -662,9 +699,9 @@ Note: Before you can download a file it must be <a href="#loadFiles">loaded</a> 
 </li>
 </ul>
 <p>​</p>
-<p><strong>Mesh-file</strong>
+<p><strong>Download a mesh-file</strong>
 Note: If a mesh file is available a second slide for the mesh file will be displayed.
-<img alt="fig.: mesh slide available" src="../images/Manual_CreateMash_1.jpg" /></p>
+<img alt="mesh_slide_available" src="../images/Manual_CreateMash_1.jpg" /></p>
 <ul>
 <li>Select the mesh slide</li>
 <li>Click on the download-icon to download the mesh-file</li>

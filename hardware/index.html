@@ -88,7 +88,10 @@
                 <li class="toctree-l3"><a href="#connecting-the-motor-drivers">Connecting the Motor drivers</a></li>
                 
             
-                <li class="toctree-l3"><a href="#how-to-connect-the-led-ring">How to Connect the LED Ring</a></li>
+                <li class="toctree-l3"><a href="#connecting-the-power-supply">Connecting the Power Supply</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#connecting-the-led-ring">Connecting the LED Ring</a></li>
                 
             
                 <li class="toctree-l3"><a href="#additional-motors-for-the-lasers">Additional Motors for the Lasers</a></li>
@@ -173,12 +176,13 @@
                 <h1 id="bill-of-materials">Bill of Materials</h1>
 <ul>
 <li>Raspberry Pi 2 or Raspberry Pi 3</li>
-<li>Stepper Motor 1.8° step angle (200 steps/revolution)</li>
+<li>Stepper Motor, NEMA 17 type, 1.8° step angle (200 steps/revolution)</li>
 <li>Pololu Universal Aluminum Mounting Hub for 5mm Shaft</li>
 <li>Motor driver (<a href="http://www.watterott.com/de/SilentStepStick">Silent Step Stick</a> recommended)</li>
 <li>5V red line laser module</li>
 <li>9g Servo Motor (not supported by the software now)</li>
 <li><a href="http://www.watterott.com/en/RPi-FabScan-HAT">FabScanPi HAT</a> for Raspberry Pi</li>
+<li>12V to 5V switching regulator</li>
 <li><a href="http://www.watterott.com/index.php?page=product&amp;info=4930">FabScanPi Camera Mount</a> with LED ring</li>
 <li><a href="http://www.watterott.com/en/FabScan-Pi-Housing-Parts">FaBScanPi Case</a></li>
 </ul>
@@ -232,7 +236,62 @@ right image: connecting a switch)</p>
 <img alt="test" src="../images/laser_safety_switch.jpg" /></p>
 <h1 id="connecting-the-motor-drivers">Connecting the Motor drivers</h1>
 <p>TODO</p>
-<h1 id="how-to-connect-the-led-ring">How to Connect the LED Ring</h1>
+<h1 id="connecting-the-power-supply">Connecting the Power Supply</h1>
+<p>The FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:</p>
+<p><strong>Option A: </strong> (recommended)
+Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT. Make sure the 5V power regulator can provide a current of min. 2.0A</p>
+<p>for 1 turntable stepper motor, 1 PiCam and 1 laser.</p>
+<p><img alt="drawing_400" src="../images/fabscanpihat_12to5.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Pin label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inp.</td>
+<td>12V from HAT as input for regulator</td>
+</tr>
+<tr>
+<td>(white square)</td>
+<td>Ground (GND)</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>5V output from regulator to FabScanPi HAT</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: For the final stage of constuction a more powerful power supply is needed. At the moment there are no technical specifications available.</p>
+<p><strong>Option B:</strong> </p>
+<p>Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB connector). </p>
+<p>NOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.</p>
+<p><strong>Option C:</strong> </p>
+<p>Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. Make sure the 5V power source can provide a current of min. 2.0A for</p>
+<p>1 turntable stepper motor, 1 PiCam and 1 laser.</p>
+<p><img alt="drawing_400" src="../images/fabscanpihat_5V.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Pin label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(white square)</td>
+<td>Ground (GND)</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>Output from external 5V power source</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: For the final stage of constuction a more powerful power supply is needed. At the moment there are no technical specifications available. Make sure you switch on the both power sources at the same time to avoid software trouble.</p>
+<h1 id="connecting-the-led-ring">Connecting the LED Ring</h1>
 <p>TODO</p>
 <h1 id="additional-motors-for-the-lasers">Additional Motors for the Lasers</h1>
 <p>TODO</p>

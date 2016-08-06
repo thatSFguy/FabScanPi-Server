@@ -173,6 +173,12 @@
 <hr />
 <h4 id="software_1">Software<a name="software"></a></h4>
 <ul>
+<li>What username and password do I need for login the FabScanPi?</li>
+</ul>
+<p>The username / password is the same as in the standard raspbian configuration: </p>
+<p>Username: <strong>pi</strong>
+Password: <strong>raspberry</strong></p>
+<ul>
 <li>What are the standard values in the config-file for the box dimensions?</li>
 </ul>
 <p>The values may vary a bit, depending on your assembly. But for getting started these values can be used:</p>
@@ -227,7 +233,20 @@
 </tbody>
 </table>
 <p>Note: Unit for all values is centimeters [cm].</p>
+<hr />
 <h4 id="hardware_1">Hardware<a name="hardware"></a></h4>
+<ul>
+<li>
+<h5 id="what-power-sources-do-i-need-to-get-my-fabscanpi-working">What power source(s) do I need to get my FabScanPi working?</h5>
+</li>
+</ul>
+<p>The FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:</p>
+<p><strong>Option A:</strong> Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT. </p>
+<p>NOTE: For details and specifications please consult the hardware chapter.</p>
+<p><strong>Option B:</strong> Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB                                 connector). </p>
+<p>NOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.</p>
+<p><strong>Option C:</strong> Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. </p>
+<p>NOTE: For details and specifications please consult the hardware chapter.</p>
 <ul>
 <li>
 <h5 id="what-is-the-rotating-direction-of-the-scan-table">What is the rotating direction of the scan table?</h5>
@@ -259,6 +278,7 @@
 </ul>
 <p>There’s no advantage in using the NoIR cam. The algorithms for the laser detection are made for 
 the normal cam. Therefore we recommend to use the normal camera modules.</p>
+<hr />
 <h4 id="scanning-issues_1">Scanning issues<a name="scanningIssues"></a></h4>
 <ul>
 <li>
@@ -290,6 +310,7 @@ the normal cam. Therefore we recommend to use the normal camera modules.</p>
 </li>
 </ul>
 <p>Check if your laser is aligned in vertical direction.</p>
+<hr />
 <h4 id="other_1">Other<a name="other"></a></h4>
 <p>tbd.</p>
               
