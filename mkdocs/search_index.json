@@ -192,83 +192,28 @@
         }, 
         {
             "location": "/faq/", 
-            "text": "Software\n\n\nHardware\n\n\nScanning Issues\n\n\nOther\n\n\n\n\nSoftware\n\n\n\n\nWhat username and password do I need for login the FabScanPi?\n\n\n\n\nThe username / password is the same as in the standard raspbian configuration: \n\n\nUsername: \npi\n\nPassword: \nraspberry\n\n\n\n\nWhat are the standard values in the config-file for the box dimensions?\n\n\n\n\nThe values may vary a bit, depending on your assembly. But for getting started these values can be used:\n\n\n\n\n\n\n\n\n\n\nx-value\n\n\ny-value\n\n\nz-value\n\n\n\n\n\n\n\n\n\n\nCamera\n\n\n0\n\n\n6.6\n\n\n24\n\n\n\n\n\n\nLaser\n\n\n10\n\n\n7.3\n\n\n20\n\n\n\n\n\n\nTurntable\n\n\n0\n\n\n0\n\n\n7.5\n\n\n\n\n\n\nScanner origin\n\n\nn/a\n\n\n0.69\n\n\nn/a\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrame value\n\n\n\n\n\n\n\n\n\n\nFrame dimension\n\n\n24\n\n\n\n\n\n\n\n\nNote: Unit for all values is centimeters [cm].\n\n\n\n\n Hardware\n\n\n\n\n\n\nWhat power source(s) do I need to get my FabScanPi working?\n\n\n\n\n\n\nThe FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:\n\n\nOption A:\n Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT. \n\n\nNOTE: For details and specifications please consult the hardware chapter.\n\n\nOption B:\n Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB                                 connector). \n\n\nNOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.\n\n\nOption C:\n Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. \n\n\nNOTE: For details and specifications please consult the hardware chapter.\n\n\n\n\n\n\nWhat is the rotating direction of the scan table?\n\n\n\n\n\n\nIt should move clockwise \u2013 if not please consult the hardware chapter of our documentation and check the connection of your stepper.\n\n\n\n\n\n\nWhat camera will work?\n\n\n\n\n\n\nFabScan Pi can be built with both Raspberry Pi Camera Modules V 1.x or V 2.x.\n\n\n\n\n\n\nIs the LED-Ring / PCB-board with LEDs mandatory?\n\n\n\n\n\n\nNo, you can start without the LEDs when you only need un-textured scans. To archive good quality texture scans we highly recommend the use of an LED light source.\n\n\n\n\n\n\nWhich LED-ring is compatible?\n\n\n\n\n\n\nAny ring using WS2812B LEDs (or compatible) will do.\n\n\n\n\n\n\nI have a Raspberry Cam Module with NoIR. Can I use it?\n\n\n\n\n\n\nThere\u2019s no advantage in using the NoIR cam. The algorithms for the laser detection are made for \nthe normal cam. Therefore we recommend to use the normal camera modules.\n\n\n\n\nScanning issues\n\n\n\n\n\n\nThe turntable is jerking during the scan process what can I do?\n\n\n\n\n\n\nThis behavior is quite normal because every time a new image has been shot the table just moves to the next position. If the table is turning smoothly (clockwise) during scan preview everything should be fine.\n\n\n\n\n\n\nMy scan is cut-off on top and / or bottom. What can I do?\n\n\n\n\n\n\nTry to optimize your scan results by changing the \u201cdimension\u201d value.\n\n\n\n\n\n\nThe texture scan is mirror-inverted.\n\n\n\n\n\n\nCheck the rotating direction of your turntable (and the connection of the stepper motor). Check and adjust your config-settings for the \u201cdimension\u201d-value.\n\n\n\n\n\n\nThe laser cannot be detected.\n\n\n\n\n\n\nMake sure your laser adjustment is correct. The laser must pass the scanning table right through the center. If no object is on the table the laser should be visible in the preview image (on the rear wall close to the left border of the image).\n\n\n\n\n\n\nThe scans don\u2019t have the same shape as the original.\n\n\n\n\n\n\nCheck if your laser is aligned in vertical direction.\n\n\n\n\nOther\n\n\ntbd.", 
+            "text": "[Software]\n(#software)\n\n\n[Hardware]\n(#hardware)\n\n\n[Scanning Issues]\n(#scanningIssues)\n\n\n[Other]\n(#other)\n\n\n\n\nSoftware\n\n\n\n\nWhat username and password do I need for login the FabScanPi?\n\n\n\n\nThe username / password is the same as in the standard raspbian configuration: \n\n\nUsername: \npi\n\nPassword: \nraspberry\n\n\n\n\nWhat are the standard values in the config-file for the box dimensions?\n\n\n\n\nThe values may vary a bit, depending on your assembly. But for getting started these values can be used:\n\n\n\n\n\n\n\n\n\n\nx-value\n\n\ny-value\n\n\nz-value\n\n\n\n\n\n\n\n\n\n\nCamera\n\n\n0\n\n\n6.6\n\n\n24\n\n\n\n\n\n\nLaser\n\n\n10\n\n\n7.3\n\n\n20\n\n\n\n\n\n\nTurntable\n\n\n0\n\n\n0\n\n\n7.5\n\n\n\n\n\n\nScanner origin\n\n\nn/a\n\n\n0.69\n\n\nn/a\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrame value\n\n\n\n\n\n\n\n\n\n\nFrame dimension\n\n\n24\n\n\n\n\n\n\n\n\nNote: Unit for all values is centimeters [cm].\n\n\n\n\nHardware\n\n\n\n\nWhat power source(s) do I need to get my FabScanPi working?\n\n\n\n\nThe FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:\n\n\nOption A:\n Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT. \n\n\nNOTE: For details and specifications please consult the hardware chapter.\n\n\nOption B:\n Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB                                 connector). \n\n\nNOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.\n\n\nOption C:\n Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. \n\n\nNOTE: For details and specifications please consult the hardware chapter.\n\n\n\n\nWhat is the rotating direction of the scan table?\n\n\n\n\nIt should move clockwise \u2013 if not please consult the hardware chapter of our documentation and check the connection of your stepper.\n\n\n\n\nWhat camera will work?\n\n\n\n\nFabScan Pi can be built with both Raspberry Pi Camera Modules V 1.x or V 2.x.\n\n\n\n\nIs the LED-Ring / PCB-board with LEDs mandatory?\n\n\n\n\nNo, you can start without the LEDs when you only need un-textured scans. To archive good quality texture scans we highly recommend the use of an LED light source.\n\n\n\n\nWhich LED-ring is compatible?\n\n\n\n\nAny ring using WS2812B LEDs (or compatible) will do.\n\n\n\n\nI have a Raspberry Cam Module with NoIR. Can I use it?\n\n\n\n\nThere\u2019s no advantage in using the NoIR cam. The algorithms for the laser detection are made for \nthe normal cam. Therefore we recommend to use the normal camera modules.\n\n\n\n\nScanning issues\n\n\n\n\nThe turntable is jerking during the scan process what can I do?\n\n\n\n\nThis behavior is quite normal because every time a new image has been shot the table just moves to the next position. If the table is turning smoothly (clockwise) during scan preview everything should be fine.\n\n\n\n\nMy scan is cut-off on top and / or bottom. What can I do?\n\n\n\n\nTry to optimize your scan results by changing the \u201cdimension\u201d value.\n\n\n\n\nThe texture scan is mirror-inverted.\n\n\n\n\nCheck the rotating direction of your turntable (and the connection of the stepper motor). Check and adjust your config-settings for the \u201cdimension\u201d-value.\n\n\n\n\nThe laser cannot be detected.\n\n\n\n\nMake sure your laser adjustment is correct. The laser must pass the scanning table right through the center. If no object is on the table the laser should be visible in the preview image (on the rear wall close to the left border of the image).\n\n\n\n\nThe scans don\u2019t have the same shape as the original.\n\n\n\n\nCheck if your laser is aligned in vertical direction.\n\n\n\n\nOther\n\n\ntbd.", 
             "title": "F.A.Q"
         }, 
         {
             "location": "/faq/#software", 
-            "text": "", 
+            "text": "What username and password do I need for login the FabScanPi?   The username / password is the same as in the standard raspbian configuration:   Username:  pi \nPassword:  raspberry   What are the standard values in the config-file for the box dimensions?   The values may vary a bit, depending on your assembly. But for getting started these values can be used:      x-value  y-value  z-value      Camera  0  6.6  24    Laser  10  7.3  20    Turntable  0  0  7.5    Scanner origin  n/a  0.69  n/a         Frame value      Frame dimension  24     Note: Unit for all values is centimeters [cm].", 
             "title": "Software"
         }, 
         {
             "location": "/faq/#hardware", 
-            "text": "", 
+            "text": "What power source(s) do I need to get my FabScanPi working?   The FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:  Option A:  Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT.   NOTE: For details and specifications please consult the hardware chapter.  Option B:  Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB                                 connector).   NOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.  Option C:  Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT.   NOTE: For details and specifications please consult the hardware chapter.   What is the rotating direction of the scan table?   It should move clockwise \u2013 if not please consult the hardware chapter of our documentation and check the connection of your stepper.   What camera will work?   FabScan Pi can be built with both Raspberry Pi Camera Modules V 1.x or V 2.x.   Is the LED-Ring / PCB-board with LEDs mandatory?   No, you can start without the LEDs when you only need un-textured scans. To archive good quality texture scans we highly recommend the use of an LED light source.   Which LED-ring is compatible?   Any ring using WS2812B LEDs (or compatible) will do.   I have a Raspberry Cam Module with NoIR. Can I use it?   There\u2019s no advantage in using the NoIR cam. The algorithms for the laser detection are made for \nthe normal cam. Therefore we recommend to use the normal camera modules.", 
             "title": "Hardware"
         }, 
         {
             "location": "/faq/#scanning-issues", 
-            "text": "", 
-            "title": "Scanning Issues"
+            "text": "The turntable is jerking during the scan process what can I do?   This behavior is quite normal because every time a new image has been shot the table just moves to the next position. If the table is turning smoothly (clockwise) during scan preview everything should be fine.   My scan is cut-off on top and / or bottom. What can I do?   Try to optimize your scan results by changing the \u201cdimension\u201d value.   The texture scan is mirror-inverted.   Check the rotating direction of your turntable (and the connection of the stepper motor). Check and adjust your config-settings for the \u201cdimension\u201d-value.   The laser cannot be detected.   Make sure your laser adjustment is correct. The laser must pass the scanning table right through the center. If no object is on the table the laser should be visible in the preview image (on the rear wall close to the left border of the image).   The scans don\u2019t have the same shape as the original.   Check if your laser is aligned in vertical direction.", 
+            "title": "Scanning issues"
         }, 
         {
             "location": "/faq/#other", 
-            "text": "Software   What username and password do I need for login the FabScanPi?   The username / password is the same as in the standard raspbian configuration:   Username:  pi \nPassword:  raspberry   What are the standard values in the config-file for the box dimensions?   The values may vary a bit, depending on your assembly. But for getting started these values can be used:      x-value  y-value  z-value      Camera  0  6.6  24    Laser  10  7.3  20    Turntable  0  0  7.5    Scanner origin  n/a  0.69  n/a         Frame value      Frame dimension  24     Note: Unit for all values is centimeters [cm].    Hardware", 
+            "text": "tbd.", 
             "title": "Other"
-        }, 
-        {
-            "location": "/faq/#what-power-sources-do-i-need-to-get-my-fabscanpi-working", 
-            "text": "The FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:  Option A:  Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT.   NOTE: For details and specifications please consult the hardware chapter.  Option B:  Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB                                 connector).   NOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.  Option C:  Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT.   NOTE: For details and specifications please consult the hardware chapter.", 
-            "title": "What power source(s) do I need to get my FabScanPi working?"
-        }, 
-        {
-            "location": "/faq/#what-is-the-rotating-direction-of-the-scan-table", 
-            "text": "It should move clockwise \u2013 if not please consult the hardware chapter of our documentation and check the connection of your stepper.", 
-            "title": "What is the rotating direction of the scan table?"
-        }, 
-        {
-            "location": "/faq/#what-camera-will-work", 
-            "text": "FabScan Pi can be built with both Raspberry Pi Camera Modules V 1.x or V 2.x.", 
-            "title": "What camera will work?"
-        }, 
-        {
-            "location": "/faq/#is-the-led-ring-pcb-board-with-leds-mandatory", 
-            "text": "No, you can start without the LEDs when you only need un-textured scans. To archive good quality texture scans we highly recommend the use of an LED light source.", 
-            "title": "Is the LED-Ring / PCB-board with LEDs mandatory?"
-        }, 
-        {
-            "location": "/faq/#which-led-ring-is-compatible", 
-            "text": "Any ring using WS2812B LEDs (or compatible) will do.", 
-            "title": "Which LED-ring is compatible?"
-        }, 
-        {
-            "location": "/faq/#i-have-a-raspberry-cam-module-with-noir-can-i-use-it", 
-            "text": "There\u2019s no advantage in using the NoIR cam. The algorithms for the laser detection are made for \nthe normal cam. Therefore we recommend to use the normal camera modules.   Scanning issues", 
-            "title": "I have a Raspberry Cam Module with NoIR. Can I use it?"
-        }, 
-        {
-            "location": "/faq/#the-turntable-is-jerking-during-the-scan-process-what-can-i-do", 
-            "text": "This behavior is quite normal because every time a new image has been shot the table just moves to the next position. If the table is turning smoothly (clockwise) during scan preview everything should be fine.", 
-            "title": "The turntable is jerking during the scan process what can I do?"
-        }, 
-        {
-            "location": "/faq/#my-scan-is-cut-off-on-top-and-or-bottom-what-can-i-do", 
-            "text": "Try to optimize your scan results by changing the \u201cdimension\u201d value.", 
-            "title": "My scan is cut-off on top and / or bottom. What can I do?"
-        }, 
-        {
-            "location": "/faq/#the-texture-scan-is-mirror-inverted", 
-            "text": "Check the rotating direction of your turntable (and the connection of the stepper motor). Check and adjust your config-settings for the \u201cdimension\u201d-value.", 
-            "title": "The texture scan is mirror-inverted."
-        }, 
-        {
-            "location": "/faq/#the-laser-cannot-be-detected", 
-            "text": "Make sure your laser adjustment is correct. The laser must pass the scanning table right through the center. If no object is on the table the laser should be visible in the preview image (on the rear wall close to the left border of the image).", 
-            "title": "The laser cannot be detected."
-        }, 
-        {
-            "location": "/faq/#the-scans-dont-have-the-same-shape-as-the-original", 
-            "text": "Check if your laser is aligned in vertical direction.   Other  tbd.", 
-            "title": "The scans don\u2019t have the same shape as the original."
         }
     ]
 }

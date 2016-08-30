@@ -111,32 +111,10 @@
                 <li class="toctree-l3"><a href="#hardware">Hardware</a></li>
                 
             
-                <li class="toctree-l3"><a href="#scanning-issues">Scanning Issues</a></li>
+                <li class="toctree-l3"><a href="#scanning-issues">Scanning issues</a></li>
                 
             
                 <li class="toctree-l3"><a href="#other">Other</a></li>
-                
-                    <li><a class="toctree-l4" href="#what-power-sources-do-i-need-to-get-my-fabscanpi-working">What power source(s) do I need to get my FabScanPi working?</a></li>
-                
-                    <li><a class="toctree-l4" href="#what-is-the-rotating-direction-of-the-scan-table">What is the rotating direction of the scan table?</a></li>
-                
-                    <li><a class="toctree-l4" href="#what-camera-will-work">What camera will work?</a></li>
-                
-                    <li><a class="toctree-l4" href="#is-the-led-ring-pcb-board-with-leds-mandatory">Is the LED-Ring / PCB-board with LEDs mandatory?</a></li>
-                
-                    <li><a class="toctree-l4" href="#which-led-ring-is-compatible">Which LED-ring is compatible?</a></li>
-                
-                    <li><a class="toctree-l4" href="#i-have-a-raspberry-cam-module-with-noir-can-i-use-it">I have a Raspberry Cam Module with NoIR. Can I use it?</a></li>
-                
-                    <li><a class="toctree-l4" href="#the-turntable-is-jerking-during-the-scan-process-what-can-i-do">The turntable is jerking during the scan process what can I do?</a></li>
-                
-                    <li><a class="toctree-l4" href="#my-scan-is-cut-off-on-top-and-or-bottom-what-can-i-do">My scan is cut-off on top and / or bottom. What can I do?</a></li>
-                
-                    <li><a class="toctree-l4" href="#the-texture-scan-is-mirror-inverted">The texture scan is mirror-inverted.</a></li>
-                
-                    <li><a class="toctree-l4" href="#the-laser-cannot-be-detected">The laser cannot be detected.</a></li>
-                
-                    <li><a class="toctree-l4" href="#the-scans-dont-have-the-same-shape-as-the-original">The scans don’t have the same shape as the original.</a></li>
                 
             
             </ul>
@@ -180,12 +158,12 @@
           <div role="main">
             <div class="section">
               
-                <h4 id="software"><a href="#software">Software</a></h4>
-<h4 id="hardware"><a href="#hardware">Hardware</a></h4>
-<h4 id="scanning-issues"><a href="#scanningIssues">Scanning Issues</a></h4>
-<h4 id="other"><a href="#other">Other</a></h4>
+                <p><strong>[Software]</strong>(#software)</p>
+<p><strong>[Hardware]</strong>(#hardware)</p>
+<p><strong>[Scanning Issues]</strong>(#scanningIssues)</p>
+<p><strong>[Other]</strong>(#other)</p>
 <hr />
-<p><strong>Software</strong><a name="software"></a></p>
+<h4 id="software">Software<a name="software"></a></h4>
 <ul>
 <li>What username and password do I need for login the FabScanPi?</li>
 </ul>
@@ -248,11 +226,9 @@ Password: <strong>raspberry</strong></p>
 </table>
 <p>Note: Unit for all values is centimeters [cm].</p>
 <hr />
-<p><strong> Hardware</strong><a name="hardware"></a></p>
+<h4 id="hardware">Hardware<a name="hardware"></a></h4>
 <ul>
-<li>
-<h5 id="what-power-sources-do-i-need-to-get-my-fabscanpi-working">What power source(s) do I need to get my FabScanPi working?</h5>
-</li>
+<li>What power source(s) do I need to get my FabScanPi working?</li>
 </ul>
 <p>The FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:</p>
 <p><strong>Option A:</strong> Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT. </p>
@@ -262,70 +238,50 @@ Password: <strong>raspberry</strong></p>
 <p><strong>Option C:</strong> Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. </p>
 <p>NOTE: For details and specifications please consult the hardware chapter.</p>
 <ul>
-<li>
-<h5 id="what-is-the-rotating-direction-of-the-scan-table">What is the rotating direction of the scan table?</h5>
-</li>
+<li>What is the rotating direction of the scan table?</li>
 </ul>
 <p>It should move clockwise – if not please consult the hardware chapter of our documentation and check the connection of your stepper.</p>
 <ul>
-<li>
-<h5 id="what-camera-will-work">What camera will work?</h5>
-</li>
+<li>What camera will work?</li>
 </ul>
 <p>FabScan Pi can be built with both Raspberry Pi Camera Modules V 1.x or V 2.x.</p>
 <ul>
-<li>
-<h5 id="is-the-led-ring-pcb-board-with-leds-mandatory">Is the LED-Ring / PCB-board with LEDs mandatory?</h5>
-</li>
+<li>Is the LED-Ring / PCB-board with LEDs mandatory?</li>
 </ul>
 <p>No, you can start without the LEDs when you only need un-textured scans. To archive good quality texture scans we highly recommend the use of an LED light source.</p>
 <ul>
-<li>
-<h5 id="which-led-ring-is-compatible">Which LED-ring is compatible?</h5>
-</li>
+<li>Which LED-ring is compatible?</li>
 </ul>
 <p>Any ring using WS2812B LEDs (or compatible) will do.</p>
 <ul>
-<li>
-<h5 id="i-have-a-raspberry-cam-module-with-noir-can-i-use-it">I have a Raspberry Cam Module with NoIR. Can I use it?</h5>
-</li>
+<li>I have a Raspberry Cam Module with NoIR. Can I use it?</li>
 </ul>
 <p>There’s no advantage in using the NoIR cam. The algorithms for the laser detection are made for 
 the normal cam. Therefore we recommend to use the normal camera modules.</p>
 <hr />
-<p><strong>Scanning issues</strong><a name="scanningIssues"></a></p>
+<h4 id="scanning-issues">Scanning issues<a name="scanningIssues"></a></h4>
 <ul>
-<li>
-<h5 id="the-turntable-is-jerking-during-the-scan-process-what-can-i-do">The turntable is jerking during the scan process what can I do?</h5>
-</li>
+<li>The turntable is jerking during the scan process what can I do?</li>
 </ul>
 <p>This behavior is quite normal because every time a new image has been shot the table just moves to the next position. If the table is turning smoothly (clockwise) during scan preview everything should be fine.</p>
 <ul>
-<li>
-<h5 id="my-scan-is-cut-off-on-top-and-or-bottom-what-can-i-do">My scan is cut-off on top and / or bottom. What can I do?</h5>
-</li>
+<li>My scan is cut-off on top and / or bottom. What can I do?</li>
 </ul>
 <p>Try to optimize your scan results by changing the “dimension” value.</p>
 <ul>
-<li>
-<h5 id="the-texture-scan-is-mirror-inverted">The texture scan is mirror-inverted.</h5>
-</li>
+<li>The texture scan is mirror-inverted.</li>
 </ul>
 <p>Check the rotating direction of your turntable (and the connection of the stepper motor). Check and adjust your config-settings for the “dimension”-value.</p>
 <ul>
-<li>
-<h5 id="the-laser-cannot-be-detected">The laser cannot be detected.</h5>
-</li>
+<li>The laser cannot be detected.</li>
 </ul>
 <p>Make sure your laser adjustment is correct. The laser must pass the scanning table right through the center. If no object is on the table the laser should be visible in the preview image (on the rear wall close to the left border of the image).</p>
 <ul>
-<li>
-<h5 id="the-scans-dont-have-the-same-shape-as-the-original">The scans don’t have the same shape as the original.</h5>
-</li>
+<li>The scans don’t have the same shape as the original.</li>
 </ul>
 <p>Check if your laser is aligned in vertical direction.</p>
 <hr />
-<p><strong>Other</strong><a name="other"></a></p>
+<h4 id="other">Other<a name="other"></a></h4>
 <p>tbd.</p>
               
             </div>
