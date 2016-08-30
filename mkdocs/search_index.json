@@ -196,37 +196,12 @@
             "title": "F.A.Q"
         }, 
         {
-            "location": "/faq/#faq", 
-            "text": "", 
-            "title": "F.A.Q."
-        }, 
-        {
             "location": "/faq/#software", 
-            "text": "", 
-            "title": "Software"
-        }, 
-        {
-            "location": "/faq/#hardware", 
-            "text": "", 
-            "title": "Hardware"
-        }, 
-        {
-            "location": "/faq/#scanning-issues", 
-            "text": "", 
-            "title": "Scanning Issues"
-        }, 
-        {
-            "location": "/faq/#other", 
-            "text": "", 
-            "title": "Other"
-        }, 
-        {
-            "location": "/faq/#software_1", 
             "text": "What username and password do I need for login the FabScanPi?   The username / password is the same as in the standard raspbian configuration:   Username:  pi \nPassword:  raspberry   What are the standard values in the config-file for the box dimensions?   The values may vary a bit, depending on your assembly. But for getting started these values can be used:      x-value  y-value  z-value      Camera  0  6.6  24    Laser  10  7.3  20    Turntable  0  0  7.5    Scanner origin  n/a  0.69  n/a         Frame value      Frame dimension  24     Note: Unit for all values is centimeters [cm].", 
             "title": "Software"
         }, 
         {
-            "location": "/faq/#hardware_1", 
+            "location": "/faq/#hardware", 
             "text": "", 
             "title": "Hardware"
         }, 
@@ -261,7 +236,7 @@
             "title": "I have a Raspberry Cam Module with NoIR. Can I use it?"
         }, 
         {
-            "location": "/faq/#scanning-issues_1", 
+            "location": "/faq/#scanning-issues", 
             "text": "", 
             "title": "Scanning issues"
         }, 
@@ -291,7 +266,7 @@
             "title": "The scans don\u2019t have the same shape as the original."
         }, 
         {
-            "location": "/faq/#other_1", 
+            "location": "/faq/#other", 
             "text": "tbd.", 
             "title": "Other"
         }
