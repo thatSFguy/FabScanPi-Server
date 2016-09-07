@@ -117,12 +117,12 @@
         }, 
         {
             "location": "/developing/", 
-            "text": "FabScan PI Server\n\n\nThe FabScan PI server code is located in this repository. The folder src/www contains the latest version of the \nFabScan PI web interface. \n\n\nInstall build dependencies with \napt-get install build-essential python-setuptools debhelper cdbs\n\n\nAfterwards the deb files can be build by calling \nmake deb\n\n\nFabScan PI Web Interface\n\n\nThe FabScan PI Web Interface is included in the server package. Developers can find the current code at \n\n\nhttp://github.com/mariolukas/\n\n\nThe web interface is located at /usr/local/fabscanpi-server/www/ \n\n\nFor further information have a look at the repository. \n\n\nBuilding FabScanPi Images", 
+            "text": "FabScan PI Server\n\n\nThe FabScan PI server code is located in this repository. The folder src/www contains the latest version of the \nFabScan PI web interface. \n\n\nInstall build dependencies with \napt-get install build-essential python-setuptools debhelper cdbs dh-python\n\n\nAfterwards the deb files can be build by calling \nmake deb\n\n\nFabScan PI Web Interface\n\n\nThe FabScan PI Web Interface is included in the server package. Developers can find the current code at \n\n\nhttp://github.com/mariolukas/\n\n\nThe web interface is located at /usr/local/fabscanpi-server/www/ \n\n\nFor further information have a look at the repository. \n\n\nBuilding FabScanPi Images", 
             "title": "Developing"
         }, 
         {
             "location": "/developing/#fabscan-pi-server", 
-            "text": "The FabScan PI server code is located in this repository. The folder src/www contains the latest version of the \nFabScan PI web interface.   Install build dependencies with  apt-get install build-essential python-setuptools debhelper cdbs  Afterwards the deb files can be build by calling  make deb", 
+            "text": "The FabScan PI server code is located in this repository. The folder src/www contains the latest version of the \nFabScan PI web interface.   Install build dependencies with  apt-get install build-essential python-setuptools debhelper cdbs dh-python  Afterwards the deb files can be build by calling  make deb", 
             "title": "FabScan PI Server"
         }, 
         {
