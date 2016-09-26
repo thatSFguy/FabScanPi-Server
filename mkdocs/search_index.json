@@ -167,12 +167,12 @@
         }, 
         {
             "location": "/community/", 
-            "text": "Slack\n\n\nUse the FabScan Slack channel for direct messaging and chat communication. \n\n\n\n\nGoogle Group\n\n\nFor general problems and information use the FabScan google group. \n\nhttps://groups.google.com/forum/#!forum/fabscan\n\n\nFacebook\n\n\nLike our Facebook Page.\n\nhttps://www.facebook.com/Fabscan\n\n\nTwitter\n\n\nTweets about FabScan can be found on Twitter. \n\nhttps://www.twitter.com/l_k3", 
+            "text": "Slack\n\n\nUse the FabScan Slack channel for direct messaging and chat communication. \nThis is the fastest way of getting support. For joining write an email to \nslack@fabscan.org with subject \"add me to slack\"\n\n\nGoogle Group\n\n\nFor general problems and information use the FabScan google group. \n\nhttps://groups.google.com/forum/#!forum/fabscan\n\n\nFacebook\n\n\nLike our Facebook Page.\n\nhttps://www.facebook.com/Fabscan\n\n\nTwitter\n\n\nTweets about FabScan can be found on Twitter. \n\nhttps://www.twitter.com/l_k3", 
             "title": "Community"
         }, 
         {
             "location": "/community/#slack", 
-            "text": "Use the FabScan Slack channel for direct messaging and chat communication.", 
+            "text": "Use the FabScan Slack channel for direct messaging and chat communication. \nThis is the fastest way of getting support. For joining write an email to \nslack@fabscan.org with subject \"add me to slack\"", 
             "title": "Slack"
         }, 
         {
