@@ -3,56 +3,72 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/hardware/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/news/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/software/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/examples/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/developing/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/hardware/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/contributing/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/software/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/community/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/developing/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/faq/</loc>
-     <lastmod>2017-01-13</lastmod>
+     <loc>/contributing/</loc>
+     <lastmod>2017-01-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/community/</loc>
+     <lastmod>2017-01-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/faq/</loc>
+     <lastmod>2017-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
