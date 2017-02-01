@@ -27,12 +27,12 @@
         }, 
         {
             "location": "/examples/", 
-            "text": "Examples\n\n\nHere are some examples of scans created with FabScanPi.", 
+            "text": "Examples\n\n\nHere are some examples of scans created with FabScanPi.\n\n\nAdditionally you can find the examples together with derived meshes as .STL files at \nGithub\n.", 
             "title": "Examples"
         }, 
         {
             "location": "/examples/#examples", 
-            "text": "Here are some examples of scans created with FabScanPi.", 
+            "text": "Here are some examples of scans created with FabScanPi.  Additionally you can find the examples together with derived meshes as .STL files at  Github .", 
             "title": "Examples"
         }, 
         {
