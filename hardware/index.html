@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
   <link href="../css/extra.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
   
   <script>
     // Current page data
@@ -85,7 +86,7 @@
                 <li class="toctree-l3"><a href="#the-fabscanpi-hat">The FabScanPi HAT</a></li>
                 
             
-                <li class="toctree-l3"><a href="#connecting-the-stepper-motor">Connecting the Stepper Motor</a></li>
+                <li class="toctree-l3"><a href="#connecting-the-stepper-motors">Connecting the Stepper Motor(s)</a></li>
                 
             
                 <li class="toctree-l3"><a href="#connecting-the-lasers">Connecting the Lasers</a></li>
@@ -205,6 +206,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W9KgYL7sZN0" frameborder="0" allowfullscreen></iframe>
 
 <h1 id="the-fabscanpi-hat">The FabScanPi HAT</h1>
+<p><strong>General description</strong></p>
 <p>The FabScan HAT is basically a combination of an Arduino and the old
 FabScan Shield for Arduino. It provides all connectors for the hardware
 parts (like motors, servos, lasers, LED's etc.) Instead of an USB 
@@ -213,12 +215,65 @@ The HAT communicates over a serial connection with the Rasperry Pi.
 (GPIO14 and GPIO15 of the Raspberry Pi). The firmware and also updates are 
 flashed automatically by the FabscanPi-Server application.</p>
 <p><img alt="drawing_400" src="../images/fabscanpihat.png" /></p>
-<h1 id="connecting-the-stepper-motor">Connecting the Stepper Motor</h1>
+<p><strong>How to Assemble the FabScanPi HAT</strong></p>
+<hr />
+<p><i class="fa fa-info-circle spacer" aria-hidden="true"></i> <em>About Soldering</em></p>
+<p><em>If you are soldering for the very fist time, we suggest to read the comic <a href="https://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf">"Soldering is Easy"</a> by Mitch Altman (soldering wisdom), Andie Nordgren (comic adaption) and Jeff Keyzer (layout and editing).</em></p>
+<hr />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DogfNxk277Y" frameborder="0" allowfullscreen></iframe>
+
+<p>The FabScanPi HAT will be delivered with the main components already assembled. You only need to install the headers and connectors which fit your demand.
+<img alt="drawing_400" src="../images\hat_assembly_1.jpg" /></p>
+<p>Let's start with the female 8-pin headers for the stepper motor controllers. First the two headers which are designated with "Stepper Turn Table". Put one in and flip the pcb to solder the pins on the rear side. Solder one pin first and make sure the header is still in the correct position. A "third hand" tool or a pcb-holder are very helpful for this job.</p>
+<p>Now you can select between three options</p>
+<ul>
+<li>
+<p><strong>Option A:</strong> Two stepper motor ports for the laser adjustment or</p>
+</li>
+<li>
+<p><strong>Option B:</strong> Two servo connector ports for the laser adjustment or</p>
+</li>
+<li>
+<p><strong>Option C:</strong> Two stepper and two servo connector ports for the lasers (additional headers required) </p>
+</li>
+</ul>
+<p>​</p>
+<p><strong>Option A:</strong></p>
+<p>Use the remaining four 8-pin femal pin headers and install them on the pcb. You can now use the HAT with three stepper motors (1x turn table, 2x laser control)</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_2a.jpg" /></p>
+<p><strong>Option B:</strong></p>
+<p>Use an electronics wire cutter to cut off two 3-pin male headers from the long male-header. Put them into the pinholes labeled "Servo opt." You can now use the HAT with one stepper motors (1x turn table) and two servos (2x servo opt.).</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_2.jpg" /></p>
+<p><strong>Option C:</strong></p>
+<p>If you are unsure about using servos or stepper motors you can install both. Therefore you'll need to buy four 8-pin female headers which are at least 8 mm of height. Install them at the pinholes for the "Stepper Laser 1 and 2". Also cut off two 3-pin male headers from the long male-header. Put them into the pinholes labeled "Servo opt." Now you can use either servo controllers nor the connectors for the servos.</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_2b.jpg" /></p>
+<p><strong>Connector for the LED-Ring</strong></p>
+<p>The next connector is the JST connector for the RPi-RingLight. Make sure the direction is correct. Fix it and solder the three pins on the rear side of the PCB.</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_3.jpg" /></p>
+<p><strong>Connectors for the stepper motors</strong></p>
+<p>Here you can use the three 4-port screw terminals if your stepper cables have no connector plug. </p>
+<p><img alt="drawing_400" src="../images\hat_assembly_4.jpg" /></p>
+<p>If the stepper motor cables have an 4-pin female connector you can use three 4-pin male headers (to be cutted off from the long header).</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_4a.jpg" /></p>
+<p><strong>Connector for Laser(s) and Laser safety switch</strong></p>
+<p>The next connector to be installed is the 6-port screw terminal. It must be soldered into the corresponding pin holes between the JST connector and the 8-pin female header for the table stepper. Later this 6-port terminal will be used to connect the Laser(s) and the Laser safety switch.</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_5.jpg" /></p>
+<p><strong>Power Connector</strong> (DC- jack)</p>
+<p>Now the DC-jack power connector will be installed into three oval pin holes across from the 2x20-pin socket header. Soldering is done from the top side of the PCB.</p>
+<p><img alt="drawing_400" src="../images\RPi-FabScan-HAT13.jpg" /></p>
+<p><strong>Assembling the Raspberry-Pi Connector</strong></p>
+<p>Now the 2x20-pin socket connector must be installed from the rear side of the PCB (where we only did soldering till now). Soldering of the 2x20-pin connector is done on the front side (where all our parts are placed). This connector is used as interface for the Raspberry-Pi.</p>
+<p><img alt="drawing_400" src="../images\hat_assembly_7.jpg" /></p>
+<p><strong>Mount the 5V DC/DC converter or 5V external Power Source</strong></p>
+<p>Additionally to the 12V DC coming from the power supply the FabScanPi needs 5V DC. Now you have to decide if you want to use a DC/DC converter IC which generates the 5V out of the 12V from the external 12 power supply (common solution). </p>
+<p>For the DC/DC converter option you can find further instructions and pictures on the <a href="https://github.com/watterott/RPi-FabScan-HAT/blob/master/hardware/RPi-FabScan-HAT_Assembly.pdf">Watterott electronic website</a>.</p>
+<p>If you are using another power supply which is capable of delivering 12V and 5V DC you can connect it as well. Details can be found <a href="#5V-EXT">here</a>.</p>
+<h1 id="connecting-the-stepper-motors">Connecting the Stepper Motor(s)</h1>
 <p>There are different kinds of stepper motos. Mostly with 4 or 6 leads. For
 connecting the stepper motor to the FabScanPi HAT you need to know the
 corresponding lead pairs of the motor coils. The best way to find out something
 about the motor is to have a look at the datasheet of the motor manufacturer.
-In the following desciptions the pairs are called (1A, 1B) and (2A, 2B).</p>
+In the following desciptions the pairs are called (2B, 1B) and (1A, 2A).</p>
 <p><img alt="drawing_300" src="../images/4wires.jpg" /> 
 <img alt="drawing_300" src="../images/6wires.jpg" /></p>
 <p>There are several ways to find the pair wires without a datasheet. Some of them
@@ -276,11 +331,12 @@ Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC re
 </tr>
 </tbody>
 </table>
+<p>For the DC/DC converter option you can find further instructions and pictures on the <a href="https://github.com/watterott/RPi-FabScan-HAT/blob/master/hardware/RPi-FabScan-HAT_Assembly.pdf">Watterott electronic website</a>.</p>
 <p>NOTE: For the final stage of constuction a more powerful power supply is needed. At the moment there are no technical specifications available.</p>
 <p><strong>Option B:</strong> </p>
 <p>Connect 12V DC to the HAT (round connector) and 5V DC to the raspberry (micro USB connector). </p>
 <p>NOTE: Make sure you switch on the both power sources at the same time to avoid software trouble.</p>
-<p><strong>Option C:</strong> </p>
+<p><strong>Option C:</strong><a name="5V-EXT"></a> </p>
 <p>Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. Make sure the 5V power source can provide a current of min. 2.0A for</p>
 <p>1 turntable stepper motor, 1 PiCam and 1 laser.</p>
 <p><img alt="drawing_400" src="../images/fabscanpihat_5V.png" /></p>
