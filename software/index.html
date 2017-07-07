@@ -301,18 +301,31 @@ updates with the following command.</p>
 </ul>
 <p>If your FabScanPi has access to the internet an information window with the latest project news will pop-up. You can close it by left-clicking on the black x in the upper right corner of the grey info window.</p>
 <p><img alt="main_menu" src="../images/Manual_0.jpg" /></p>
-<p>Now your can start using your FabScanPi.</p>
+<p><strong>First start-up<a name="firststartup-"></a></strong></p>
+<p>Before you proceed with the calibration and your first scan please check a few things to ensure your FabScanPi is working properly:</p>
+<ul>
+<li>Click on the duck icon (New Scan) to enter the scan menu.</li>
+<li>Now the turntable should turn clockwise in a constant smooth manner.</li>
+<li>The laser must be on and needs to be adjusted vertically and to cross the center of the turntable. You will have to do the adjustment by hand because the servo / stepper support for the laser has not been implemented yet.</li>
+<li>Check if you can see a small video preview in the lower lest corner of the scan menu. Maybe there is only a turning hour glass visible. That is a known problem of some browsers but will have not effect the scanner's function.</li>
+<li>Click on the X (Cancel) to get back to the main menu.</li>
+</ul>
 <hr />
 <p><strong>Calibration<a name="calibration"></a></strong></p>
-<p>Before you can start with your first scans you must perform an calibration. That is necessary because every Scanner housing is a bit different.  By calibrating your scanner the software will get the exact parameters of your FabScanPi. Only after finishing the calibration successfully you will have good scan results .</p>
+<p>Before you can start with your first scans you must perform a calibration. That is necessary because every Scanner housing is a bit different.  By calibrating your scanner the software will get the exact parameters of your FabScanPi. You will have to do the calibration only once, the gathered data will be stored. But we recommend to do a calibration every time when the FabScanPi has been shipped, modified or when the scan results look distorted. </p>
+<p>NOTE: Only after finishing the calibration successfully you will have good scan results .</p>
 <p>The calibration will be done by scanning an calibration sheet with a specific pattern which must be placed on the turntable. The pattern must face the camera:</p>
 <p><img alt="main_menu" src="../images/calibration_start_position.jpg" />
-NOTICE: The second laser in the image is not supported by the software yet. This will be a featrue available within the next release.</p>
-<p>Option 1: You can can build yout own calibration sheet from a cardboard sheet. Print the calibration sheet onto paper and glue it to cardboard. Build a stand of another piece of cardboard. You maybe have to fix the calibration sheet on the turntable by using some adhesive tape.</p>
+NOTICE: The second laser in the image is not supported by the software yet. This will be a feature available within the next release.</p>
+<p>Option 1: You can can build your own calibration tool from cardboard. Print the calibration sheet onto paper and glue it to cardboard. Build a stand of another piece of cardboard. Maybe you have to fix the calibration sheet on the turntable by using some adhesive tape.</p>
 <p>Option 2: You have an 3D-printer available and can print out our calibration sheet holder. There's also a different calibration sheet for external holder use.</p>
 <p><a href="https://github.com/mariolukas/FabScan-Case/tree/master/calibration">Download calibration mount and sheet!</a></p>
-<p>Note: Please check if your print of the calibration sheet has the correct scale. Each black square should have the side length of 10 mm (1 cm). If the size is not correct please correct the parameter "pattern square size" in the configuration file. </p>
+<p>Note: Please check if your print of the calibration sheet has the correct scale. Each black square should have the same side length as stated on the calibration sheet (e.g.11 mm (1,1 cm). If the size is not correct please correct the parameter "pattern square size" in the configuration file. </p>
 <p>You can find all details in the chapter "<a href="#editConfigFile">How to Edit the Config File</a>".</p>
+<p>Place the calibration sheet on the turntable facing the camera.</p>
+<p>IMPORTANT: Make sure that in the upper left corner is a black square as you can see on the picture below. If the sheet is placed wrong the calibration will generate incorrect values or may fail.</p>
+<p><img alt="main_menu" src="../images/calibration_sheet_position.jpg" /></p>
+<p>Please close the box to avoid external light sources to impact the calibration process. Start  your browser and call http://ip-of-your-raspberry-pi:8080 which will open the user interface. </p>
 <p>Start the calibration procedure by clicking on the gun sight icon in the very upper left corner.</p>
 <p><img alt="main_menu" src="../images/Manual_1.jpg" /></p>
 <p>An information "Calibration started" will be displayed in the upper left corner.</p>
@@ -322,6 +335,7 @@ NOTICE: The second laser in the image is not supported by the software yet. This
 <p>When the calibration was finished successfully another notification will appear for a short time in the upper left corner.</p>
 <p><img alt="main_menu" src="../images/Manual_2c.jpg" /></p>
 <p>Now you can remove the calibration pattern sheet from the turntable and start your first scan.</p>
+<p>NOTE: If your scan results look not like they should, probably distorted or skewed please check the calibration data in the configuration file. You can find details about the different relevant parameters in the <a href="#config-file-values">Config File Values</a> section of this documentation.</p>
 <p><strong>Scan Settings<a name="scansettings"></a></strong></p>
 <p>Note: The current settings are only persistent as long as the pi is up and running. The settings are saved with the scan data after a successful scan. They can be loaded to scan another object with the same settings. E.g. an object what consists of the same material, color etc. </p>
 <ul>
@@ -495,6 +509,7 @@ Note: If a mesh file is available a second slide for the mesh file will be displ
 <p>A configuration file can be found in /etc/fabscanpi/default.config.json. The content of this file 
 is in JSON format and can be edited with an editor of your choice (e.g. nano). Be careful and don't
 miss brackets. JSON is really sensitive in it's format.</p>
+<p>NOTE: The following listing snippets are only examples and may deviate from the latest settings.</p>
 <p><strong>Folders</strong></p>
 <p>In this section you can change the scan output folder and the folder where the ui is located. If 
 you don't know what you are doing, it is a good decision to keep this section untouched.</p>
@@ -520,7 +535,7 @@ you don't know what you are doing, it is a good decision to keep this section un
 <pre><code>&quot;weight_matrix&quot;: [],
 &quot;dist_camera_matrix&quot;: [],
 &quot;pattern&quot;: {
-    &quot;square_size&quot;: 10,
+    &quot;square_size&quot;: 11,
     &quot;rows&quot;: 6,
     &quot;columns&quot;: 9,
     &quot;origin_distance&quot;: 29
