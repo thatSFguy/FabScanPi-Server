@@ -116,11 +116,9 @@
             
                 <li class="toctree-l3"><a href="#hardware">Hardware</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#scanning-issues">Scanning issues</a></li>
+                    <li><a class="toctree-l4" href="#scanning-issues">Scanning issues</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#other">Other</a></li>
+                    <li><a class="toctree-l4" href="#other">Other</a></li>
                 
             
             </ul>
@@ -168,48 +166,81 @@
 <p><strong><a href="#scanningIssues">Scanning Issues</a></strong></p>
 <p><strong><a href="#other">Other</a></strong></p>
 <hr />
-<h4 id="software">Software<a name="software"></a></h4>
+<h1 id="software">Software<a name="software"></a></h1>
 <ul>
-<li>What username and password do I need for login the FabScanPi?</li>
+<li><strong>What username and password do I need for login the FabScanPi?</strong></li>
 </ul>
 <p>The username / password is the same as in the standard raspbian configuration: </p>
-<p>Username: <strong>pi</strong></p>
-<p>Password: <strong>raspberry</strong></p>
+<p>Username: <strong>pi</strong> <br/>
+  Password: <strong>raspberry</strong></p>
 <ul>
-<li>There is no preview video visible in the menu.</li>
+<li><strong>Do I have to perform the calibration every time when I restart my FabScanPi?</strong></li>
 </ul>
-<p>There is no video - only a black area, maybe a turning hour glass visible. That is a known problem of some browsers but will have not effect the scanner's function. This bug will be fixed in the future.</p>
-<p>​</p>
+<p>No, the calibration data will be stored. We recommend to perform a calibration every time when the FabScanPi has been shipped, modified or the scan results show signs of deformation.</p>
 <ul>
-<li>Where can I find the config file?</li>
+<li><strong>The calibrations fails every time. What can I do?</strong></li>
 </ul>
+<p>The laser and the LED-light are needed for the calibration, they must be installed and be able to work. Make sure the box is closed during calibration so that no external light can cause problems. </p>
+<ul>
+<li><strong>Where can I find the calibration file?</strong></li>
+</ul>
+<p>You can find it in the folder: <code>/etc/fabscanpi</code></p>
+<p>The config file is named : <code>default.config.json</code></p>
+<ul>
+<li><strong>Where can I find the initial settings of the LED-light, Camera brightness, contrast and saturation?</strong></li>
+</ul>
+<p>You can find it in the folder: <code>/etc/fabscanpi</code></p>
+<p>The config file is named : <code>default.settings.json</code></p>
+<p>​
+- <strong>Where can I find the log file?</strong></p>
 <p>You can find it in the folder: <code>/var/log/fabscanpi</code></p>
 <p>The config file is named : <code>fabscanpi.log</code></p>
-<p>​</p>
 <ul>
-<li>How can I view the log file?</li>
+<li><strong>How can I view the log file?</strong></li>
 </ul>
 <p>You can see the log file on screen by typing:</p>
-<p><code>cat /var/log/fabscanpi/fabscanpi.log</code></p>
-<p>​</p>
+<pre><code>cat /var/log/fabscanpi/fabscanpi.log
+</code></pre>
 <ul>
-<li>How can I edit the log file?</li>
+<li><strong>How can I edit the log file?</strong></li>
 </ul>
 <p>You can edit the log file with the nano editor by typing:</p>
-<p><code>`sudo nano /var/log/fabscanpi/fabscanpi.log</code></p>
+<pre><code>sudo nano /var/log/fabscanpi/fabscanpi.log
+</code></pre>
 <p>To save the file press "Ctrl+O" followed by "enter".</p>
 <p>To exit the nano editor press "Ctrl+X".</p>
 <ul>
-<li>How can I stop / start the FabScanPi server?</li>
+<li><strong>How can I stop / start the FabScanPi server?</strong></li>
 </ul>
 <p>You can stop the server from the console by typing:</p>
-<p><code>sudo /etc/init.d/fabscanpi-server stop</code></p>
+<pre><code>sudo /etc/init.d/fabscanpi-server stop
+</code></pre>
 <p>or to (re) start:</p>
-<p><code>sudo /etc/init.d/fabscanpi-server stop</code></p>
-<hr />
-<h4 id="hardware">Hardware<a name="hardware"></a></h4>
+<pre><code>sudo /etc/init.d/fabscanpi-server stop
+</code></pre>
 <ul>
-<li>What power source(s) do I need to get my FabScanPi working?</li>
+<li><strong>How can I use the latest (probably unstable) software?</strong></li>
+</ul>
+<p>You must edit the repository settings in the surces list in the console by typing:</p>
+<pre><code> sudo nano /etc/apt/sources.list
+</code></pre>
+<p>Modify the sources.list that it looks exactly like this:</p>
+<p><img alt="Reboot" src="../images/SourcesList.jpg" /></p>
+<p>NOTE: In newer images the entry is called <code>stable</code> instead of <code>jessie</code></p>
+<p>This will change the update source to the testing directory. </p>
+<p>NOTE: To switch back to the official release you need to remove the # from the 2nd line and place it in front of the 3rd line.</p>
+<p>To save your changes press CTRL + O, then ENTER and exit with CTRL + X</p>
+<p>Now do an update and dist-upgrade:</p>
+<pre><code>$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+</code></pre>
+<p>Finally you should reboot the FabScanPi:</p>
+<pre><code>$ sudo reboot now
+</code></pre>
+<p>NOTE: Now you will use the testing data source. Because it is not officially released there will be NO SUPPORT for this version.</p>
+<h1 id="hardware">Hardware<a name="hardware"></a></h1>
+<ul>
+<li><strong>What power source(s) do I need to get my FabScanPi working?</strong></li>
 </ul>
 <p>The FabScanPi will need 12V DC and 5V DC. There are different options to fulfil this requirement:</p>
 <p><strong>Option A:</strong> Connect 12V DC to the HAT (round connector) and install a 12V DC - to - 5V DC regulator on the designated space on the HAT. </p>
@@ -219,52 +250,147 @@
 <p><strong>Option C:</strong> Connect 12V DC to the HAT (round connector) and connect a 5V DC power source to the 5V pin regulator pin on the HAT. </p>
 <p>NOTE: For details and specifications please consult the hardware chapter.</p>
 <ul>
-<li>What is the rotating direction of the scan table?</li>
+<li><strong>What is the rotating direction of the scan table?</strong></li>
 </ul>
 <p>It should move clockwise – if not please consult the hardware chapter of our documentation and check the connection of your stepper.</p>
 <ul>
-<li>Which camera will work?</li>
+<li><strong>Which camera will work?</strong></li>
 </ul>
 <p>FabScan Pi can be built with both Raspberry Pi Camera Modules V 1.x or V 2.x.</p>
 <ul>
-<li>Is the LED-Ring / PCB-board with LEDs mandatory?</li>
+<li><strong>I have a Raspberry Cam Module with NoIR. Can I use it?</strong></li>
+</ul>
+<p>There’s no advantage in using the NoIR cam. The algorithms for the laser detection are made for the normal cam. Therefore we recommend to use the normal camera modules.</p>
+<ul>
+<li><strong>Is the LED-Ring / PCB-board with LEDs mandatory?</strong></li>
 </ul>
 <p>Yes, because the light is needed to perform the calibration. It is also necessary to archive good quality texture scans.</p>
 <ul>
-<li>Which LED-ring is compatible?</li>
+<li><strong>Which LED-ring is compatible?</strong></li>
 </ul>
 <p>Any ring using WS2812B LEDs (or compatible) will do. To avoid problems with the calibration we suggest using the FabScanPi LED-board.</p>
 <ul>
-<li>I have a Raspberry Cam Module with NoIR. Can I use it?</li>
+<li><strong>My servo stepper / servo isn't working</strong></li>
 </ul>
-<p>There’s no advantage in using the NoIR cam. The algorithms for the laser detection are made for the normal cam. Therefore we recommend to use the normal camera modules.</p>
+<p>There is no implementation for the servo/stepper to move the laser until now.</p>
+<ul>
+<li><strong>No connection to Arduino, how can i fix that?</strong></li>
+</ul>
+<p>First you need to find out more about the problem. Have a look to the log file (see "How can i view the log file?" in F.A.Q.). 
+   Find the section where the init sequence of the server starts. Look for the folowing line ... </p>
+<p><code>fabscan.server - INFO - FabScanPi-Server 0.4.2</code></p>
+<p>If the next lines look like the the debug output below, the fabscanpi-server is not able to flash the firmware 
+   to the FabScanPi-HAT (or Arduino).</p>
+<pre><code>fabscan.scanner.laserscanner.FSSerial - ERROR - No FabScanPi HAT or compatible device found on port /dev/ttyAMA0
+
+fabscan.scanner.laserscanner.FSSerial - ERROR - Fatal FabScanPi HAT or compatible connection error....
+
+fabscan.scanner.laserscanner.FSHardwareController - DEBUG - Reset FabScanPi HAT...
+
+fabscan.scanner.laserscanner.FSSerial - ERROR - 'NoneType' object has no attribute 'write'
+
+fabscan.scanner.laserscanner.FSSerial - DEBUG - 'NoneType' object has no attribute 'readline'
+
+fabscan.scanner.laserscanner.FSSerial - ERROR - 'NoneType' object has no attribute 'write'
+</code></pre>
+<p>If this error occurs by the first run please start reading with 1. In case this error occurs after an fabscanpi-server update 
+   and your software worked before, continue reading with 2. </p>
 <hr />
+<ol>
+<li>
+<p>First double check the solder joints of the 40-pin Header of the FabScanPi-HAT. If you are sure that there are no 'cold' solder joints move on 
+   reading, otherwise resolder those joints. Try again and have a look to the logs. If the error still occurs continue reading with 3.</p>
+</li>
+<li>
+<p>Check if your fabscanpi-server version is 0.4.2 or higher. Have a look into your default.config.json and check the serial baudrate. It should be 57600 for fabscanpi-server &gt;= 0.4.2. 
+   If you changed the baudrate and the error still occurs continue with reading 3. </p>
+</li>
+<li>
+<p>Your bootloader is bricked, what means that you need to flash a new bootloader to your FabScanPi HAT. Continue with reading "How to flash the FabScanPi HAT Bootloader?"</p>
+</li>
+</ol>
+<hr />
+<ul>
+<li><strong>How to flash the FabScanPi HAT Bootloader?</strong></li>
+</ul>
+<p><strong>Option A: Using Raspberry Pi for flashing.</strong></p>
+<p>Connect the FabScanPi HAT pins as described below. (solder some wires to the solder pads). Use a resistor 2k2...5k6 in series for every signal. (see picture for details)</p>
+<pre><code>RPi  -&gt; Target
+IO25 -&gt; Reset
+IO11 -&gt; SCK
+IO10 -&gt; MOSI
+IO9  -&gt; MISO
+GND  -&gt; GND
+</code></pre>
+
+<blockquote>
+<p><img alt="drawing_400" src="../images/isp_pi_hat.png" />
+  Download bootloader:</p>
+</blockquote>
+<pre><code>$ wget https://github.com/watterott/RPi-UNO-HAT/raw/master/docu/bloader.hex
+</code></pre>
+<p>Edit the file <code>avrdude.conf</code> and add the following lines:</p>
+<pre><code>$ sudo nano /usr/local/etc/avrdude.conf
+
+programmer
+  id    = "pi_isp";
+  desc  = "GPIO bitbang";
+  type  = "linuxgpio";
+  reset = 25;
+  sck   = 11;
+  mosi  = 10;
+  miso  = 9;
+;
+</code></pre>
+<p>Flash bootloader:</p>
+<pre><code>$ avrdude -c pi_isp -p m328p -e -U flash:w:bloader.hex:i -U lfuse:w:0xFF:m -U hfuse:w:0xD6:m -U efuse:w:0x05:m -U lock:w:0x0F:m
+</code></pre>
+<p><strong>Option B: Using Arduino Uno (device <code>ttyACM0</code> or <code>ttyUSB0</code>) for flashing.</strong></p>
+<p>Connection (Arduino Uno connected to RPi via USB):</p>
+<pre><code>Uno -&gt; Target
+D10 -&gt; Reset
+D13 -&gt; SCK
+D11 -&gt; MOSI
+D12 -&gt; MISO
+GND -&gt; GND
+</code></pre>
+
+<p><img alt="drawing_400" src="../images/isp_arduino_hat.png" /></p>
+<p>Download bootloader and ISP firmware:</p>
+<pre><code>$ wget https://github.com/watterott/RPi-UNO-HAT/raw/master/docu/bloader.hex
+$ wget https://github.com/watterott/RPi-UNO-HAT/raw/master/docu/isp.hex
+</code></pre>
+<p>Flash ISP firmware to Arduino Uno:</p>
+<pre><code>$ avrdude -c arduino -P /dev/ttyACM0 -b 115200 -p m328p -e -U flash:w:isp.hex:i
+</code></pre>
+<p>Flash bootloader:</p>
+<pre><code>$ avrdude -c stk500v1 -P /dev/ttyACM0 -b 19200 -p m328p -e -U flash:w:bloader.hex:i -U lfuse:w:0xFF:m -U hfuse:w:0xD6:m -U efuse:w:0x05:m -U lock:w:0x0F:m
+</code></pre>
 <h4 id="scanning-issues">Scanning issues<a name="scanningIssues"></a></h4>
 <ul>
-<li>The turntable is jerking during the scan process what can I do?</li>
+<li><strong>The turntable is jerking during the scan process what can I do?</strong></li>
 </ul>
 <p>This behavior is quite normal because every time a new image has been shot the table just moves to the next position. If the table is turning smoothly (clockwise) during scan preview everything should be fine.</p>
 <ul>
-<li>My scan is cut-off on top and / or bottom. What can I do?</li>
+<li><strong>My scan is cut-off on top and / or bottom. What can I do?</strong></li>
 </ul>
 <p>Try to optimize your scan results by measuring the "origin_distance" of your calibration sheet. Correct the value in the configuration. Make sure the size of the black squares on your calibration sheet as the same as "square_size" in the calibration file.</p>
 <ul>
-<li>The texture scan is mirror-inverted.</li>
+<li><strong>The texture scan is mirror-inverted.</strong> </li>
 </ul>
 <p>Check the rotating direction of your turntable (and the connection of the stepper motor). Check and adjust your config-settings for the “dimension”-value.</p>
 <ul>
-<li>The laser cannot be detected.</li>
+<li><strong>The laser cannot be detected.</strong></li>
 </ul>
 <p>Make sure your laser adjustment is correct. The laser must pass the scanning table right through the center. If no object is on the table the laser should be visible in the preview image (on the rear wall close to the left border of the image).</p>
 <ul>
-<li>The scans don’t have the same shape as the original.</li>
+<li><strong>The scans don’t have the same shape as the original.</strong></li>
 </ul>
 <p>Check if your laser is aligned in vertical direction. Do another calibration.</p>
 <ul>
-<li>Calibrations fails / no "Calibration finished" message is displayed</li>
+<li><strong>Calibrations fails / no "Calibration finished" message is displayed</strong></li>
 </ul>
 <p>Check the starting position of the calibration sheet and make sure your box is closed during the scan. The calibration sheet must be placed with a black square in the upper left corner.</p>
-<hr />
 <h4 id="other">Other<a name="other"></a></h4>
 <p>tbd.</p>
               
