@@ -247,7 +247,7 @@ Install dependencies</p>
 <h1 id="updating-the-software">Updating the Software</h1>
 <p>Updates can be installed with debian's apt-get package manager. Log in via ssh and check/install 
 updates with the following command.</p>
-<pre><code>sudo apt-get update &amp;&amp; apt-get dist-upgrade
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
 </code></pre>
 
 <h1 id="software-user-manual">Software User Manual</h1>
@@ -307,7 +307,7 @@ updates with the following command.</p>
 <li>Click on the duck icon (New Scan) to enter the scan menu.</li>
 <li>Now the turntable should turn clockwise in a constant smooth manner.</li>
 <li>The laser must be on and needs to be adjusted vertically and to cross the center of the turntable. You will have to do the adjustment by hand because the servo / stepper support for the laser has not been implemented yet.</li>
-<li>Check if you can see a small video preview in the lower lest corner of the scan menu. Maybe there is only a turning hour glass visible. That is a known problem of some browsers but will have not effect the scanner's function.</li>
+<li>Check if you can see a small video preview in the lower left corner of the scan menu. Maybe there is only a turning hour glass visible. That is a known problem of some browsers but will have not effect the scanner's function.</li>
 <li>Click on the X (Cancel) to get back to the main menu.</li>
 </ul>
 <hr />
@@ -319,6 +319,7 @@ updates with the following command.</p>
 NOTICE: The second laser in the image is not supported by the software yet. This will be a feature available within the next release.</p>
 <p>Option 1: You can can build your own calibration tool from cardboard. Print the calibration sheet onto paper and glue it to cardboard. Build a stand of another piece of cardboard. Maybe you have to fix the calibration sheet on the turntable by using some adhesive tape.</p>
 <p>Option 2: You have an 3D-printer available and can print out our calibration sheet holder. There's also a different calibration sheet for external holder use.</p>
+<p>INFO: To get a perfectly flat and stable surface glue the calibration sheet on a piece of thick pcb (printed circuit board).</p>
 <p><a href="https://github.com/mariolukas/FabScan-Case/tree/master/calibration">Download calibration mount and sheet!</a></p>
 <p>Note: Please check if your print of the calibration sheet has the correct scale. Each black square should have the same side length as stated on the calibration sheet (e.g.11 mm (1,1 cm). If the size is not correct please correct the parameter "pattern square size" in the configuration file. </p>
 <p>You can find all details in the chapter "<a href="#editConfigFile">How to Edit the Config File</a>".</p>
@@ -408,7 +409,7 @@ Click on the  arrows-and-circle symbol (5) to get access to the alignment menu.
 <ul>
 <li>You can now check, download or delete the scan-data.</li>
 </ul>
-<p>** Generate Mesh<a name="generateMesh"></a></p>
+<p><strong>Generate Mesh</strong><a name="generateMesh"></a></p>
 <p>The FabScanPi software includes a feature to convert a scan into a mesh-file. This mesh-file can be used for 3D-printing.
 Note: To generate a mesh-file a scan must have been performed. It is also possible to load a scan-file which has been saved previously. </p>
 <ul>
@@ -449,7 +450,7 @@ Note: Depending on the size and complexity of the scan file as well as the type 
   <img alt="open_options_menu" src="../images/Manual_CreateMash_8.jpg" /></p>
 </li>
 </ul>
-<p>** File Operations<a name="fileOperations"></a></p>
+<p><strong>File Operations</strong><a name="fileOperations"></a></p>
 <ul>
 <li>Load files<a name="loadFiles"></a></li>
 </ul>
@@ -736,7 +737,7 @@ iface default inet dhcp
 </code></pre>
 
 <p>Now restart your network adapters. </p>
-<pre><code>sudo nano /etc/init.d/networking
+<pre><code>sudo /etc/init.d/networking restart
 </code></pre>
 
 <p>If you type <code>sudo ifconfig</code> there should be a wlan0 connection in the list. </p>
