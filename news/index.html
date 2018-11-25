@@ -55,6 +55,12 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#fabscanpi-060-release-2018-11-25">FabScanPi 0.6.0 release. (2018-11-25)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#fabscanpi-050-release-2018-04-04">FabScanPi 0.5.0 release. (2018-04-04)</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#fabscanpi-043-and-updated-documentation-2017-07-26">FabScanPi 0.4.3 and updated documentation. (2017-07-26)</a></li>
                 
             
@@ -156,7 +162,44 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="fabscanpi-043-and-updated-documentation-2017-07-26">FabScanPi 0.4.3 and updated documentation. (2017-07-26)</h3>
+                <h3 id="fabscanpi-060-release-2018-11-25">FabScanPi 0.6.0 release. (2018-11-25)</h3>
+<p>This release mainly fixes a lot of bugs and the Tornado Framework is introduced. This brings more 
+stability to the webserver part. The whole webserver code was refactored. Since AVRDude was upgraded
+in Raspbian stretch, version 0.5.0 does not work anymore. The AVRDude bug was responsible for serial 
+connection and firmware flashing problems (it is not a bootloader problem as described in the F.A.Q).</p>
+<p>Changelog for this version: </p>
+<ul>
+<li>refactored webserver backend code</li>
+<li>introduced Tornado web framework</li>
+<li>fixed calibration non blocking bug.</li>
+<li>fixed flushing camera buffer</li>
+<li>fixed camera settings</li>
+<li>better camera stream performance (nearby live now)</li>
+<li>fixed gap at the beginning/end of a scan</li>
+<li>added swapping support for high res scans</li>
+<li>fixed avrdude bug</li>
+<li>fixed stepper missing steps bug (aka stepper wobble)</li>
+<li>added new version of frontend with some fixes</li>
+</ul>
+<h3 id="fabscanpi-050-release-2018-04-04">FabScanPi 0.5.0 release. (2018-04-04)</h3>
+<p>The new release brings a better camera performance and also the USB cam module back. 
+We switched to a newer version of OpenCV which leads also to a better performance 
+and a more stable calibration process.</p>
+<p>Changelog for this version:</p>
+<ul>
+<li>fixed pykka aktor threading bug in streams</li>
+<li>fixed bug realated to 400 step motors</li>
+<li>replaced magic numbers by config values (tnx to jwalt)</li>
+<li>fixed typo in documentation (tnx to kradrat)</li>
+<li>new documentation parts (tnx to jens hackel)</li>
+<li>fixed green cam bug</li>
+<li>added deleting old calibration data before new calibration</li>
+<li>refactored camera driver ( much faster than before )</li>
+<li>added abort sequence when scanner is not calibrated</li>
+<li>added new handlers for gracefull application shutdown</li>
+<li>fixed start stop init script and added better logging to it</li>
+</ul>
+<h3 id="fabscanpi-043-and-updated-documentation-2017-07-26">FabScanPi 0.4.3 and updated documentation. (2017-07-26)</h3>
 <p>First of all i would like to thank all FabScanPi builders/users/community members for 
 reporting bugs and sharing experiences. Special thanks goes to Jens Hackel for his
 awesome job on writing most of the FabScanPi documentation. </p>
